@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+---
+
+<header class="text-white font-light">
+    <div
+        class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+    >
+        <a class="flex title-font font-medium items-center">
+            <Image
+                class="w-20 h-20 object-contain pointer-events-none"
+                src="/img/CLStudio/CLStudioWhiteLite.png"
+                alt="Logo Optimafar"
+                width={400}
+                height={400}
+                format="png"
+                loading="eager"
+            />
+        </a>
+        <nav
+            class="md:ml-auto flex flex-wrap items-center text-base justify-center space-x-5 md:space-x-20"
+        >
+            <a
+                href="/"
+                class="hover:font-semibold hover:text-clstudio-pink transition-all duration-150"
+                >Home</a
+            >
+            <a
+                class="hover:font-semibold hover:text-clstudio-pink transition-all duration-150"
+                >Skills</a
+            >
+            <a
+                class="hover:font-semibold hover:text-clstudio-pink transition-all duration-150"
+                >Filosofía</a
+            >
+            <a
+                class="hover:font-semibold hover:text-clstudio-pink transition-all duration-150"
+                >Proyectos</a
+            >
+            <a
+                class="hover:font-semibold hover:text-clstudio-pink transition-all duration-150"
+                >Contacto</a
+            >
+        </nav>
+    </div>
+</header>
