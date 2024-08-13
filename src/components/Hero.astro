@@ -1,0 +1,80 @@
+<div class="w-full h-[90vh] flex justify-center">
+    <div
+        class="container flex flex-col h-72 absolute mt-4 md:mt-16 animate-fade-in-up px-4 md:px-52 z-40"
+    >
+        <section class="flex flex-col md:flex-row justify-between">
+            <h1
+                class="text-white font-bold text-3xl md:text-5xl order-2 md:order-1"
+            >
+                ¡Hola! Soy Carlos López
+                <p class="text-xl md:text-3xl pt-4 font-normal">
+                    Soy desarrollador de <span class="text-clstudio-pink"
+                        >software</span
+                    >
+                </p>
+            </h1>
+            <div
+                class="h-28 w-28 order-1 md:order-2 mt-10 mb-4 md:my-0 flex justify-center items-center bg-white rounded-full"
+            >
+                <img
+                    src="/img/CLStudio/CLStudio.png"
+                    class="h-12 inset-0 w-auto order-1 md:order-2"
+                />
+            </div>
+        </section>
+        <p
+            class="text-white font-light text-xl justify-start mt-8 pr-4 leading-relaxed z-40"
+        >
+            Especializado en desarrollo de videojuegos, pero también apasionado
+            por el desarrollo web. Con +6 años de experiencia programando y +4
+            años de experiencia profesional, estoy abierto a oportunidades en la
+            industria de videojuegos, aunque actualmente me encuentro en busca
+            activa de un puesto como desarrollador backend.
+        </p>
+        <section class="flex flex-row"></section>
+    </div>
+    <canvas class="background relative object-cover -z-20"> </canvas>
+</div>
+
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"
+></script>
+
+<script type="module">
+    window.onload = function () {
+        Particles.init({
+            selector: ".background",
+            sizeVariations: 10,
+            color: ["#FFFFFF", "#CC147F", "#F2F2F2"],
+            particles: {
+                number: {
+                    value: 180,
+                    density: {
+                        enable: true,
+                        value_area: 1500,
+                    },
+                },
+            },
+            opacity: {
+                value: 0.25,
+                random: true,
+                anim: {
+                    enable: false,
+                    speed: 1,
+                    opacity_min: 0.1,
+                    sync: false,
+                },
+            },
+            size: {
+                value: 3,
+                random: true,
+                anim: {
+                    enable: false,
+                    speed: 40,
+                    size_min: 0.5,
+                    sync: false,
+                },
+            },
+        });
+    };
+</script>

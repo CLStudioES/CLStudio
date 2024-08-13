@@ -1,7 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
 ---
 
-<Layout title="CLStudio - Home">
-	<main></main>
+<Layout title="CLStudio - Desarrollo de Software">
+	<main>
+		<Hero />
+		<slot />
+		<hr class="text-white text-opacity-25 w-11/12 mx-auto" />
+		<div class="w-full h-36 bg-clstudio-black"></div>
+	</main>
 </Layout>
