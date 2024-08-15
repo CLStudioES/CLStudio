@@ -1,2 +1,3 @@
 -   [] Header Hamburger effect con glassmorphism en formato movil
 -   [] Seccion RRSS
+-   [] Sección de Skills
