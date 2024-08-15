@@ -1,0 +1,47 @@
+<script type="module">
+    import TagCloud from "https://cdn.skypack.dev/TagCloud@2.3.2";
+
+    const container = ".tagcloud-container";
+    const texts = [
+        "VueJs",
+        "NuxtJs",
+        "JavaScript",
+        "Pinia",
+        "Vuex",
+        "Html5",
+        "Css3",
+        "Scss",
+        "Python",
+        "C",
+        "Node",
+        "jQuery",
+        "Git",
+        "GitHub",
+        "Rest API",
+        "Linux",
+        "Figma",
+        "MySQL",
+        "NoSQL",
+        "Bash",
+        "Axios",
+        "Jest",
+        "Frontend",
+        "Agile",
+        "OOP",
+    ];
+    const options = {
+        // containerClass: "tag-cloud",
+        // itemClass: "tag",
+        radius: 150,
+        direction: 180,
+        initSpeed: "slow",
+        maxSpeed: "slow",
+    };
+
+    TagCloud(container, texts, options);
+</script>
+
+<div class="container flex flex-col md:flex-row">
+    <div class="mx-auto"></div>
+    <div class="tagcloud-container text-white font-extralight mx-auto"></div>
+</div>

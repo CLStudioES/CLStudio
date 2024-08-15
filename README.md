@@ -20,6 +20,13 @@ Todos los comandos que puedes usar para correr el proyecto desde la terminal
 
 MIDUDEV - TAILWIND_ANIMATIONS 🤙:
 - 🎊: [REPO MIDUDEV](https://github.com/midudev/tailwind-animations)
-VincentGarreau - Particles JS 🤙:
+
+
+VINCENTGARREAU - PARTICLES JS 🤙:
 - 🔵: [REPO VINCENT](https://github.com/VincentGarreau/particles.js)
+
+
+CONG-MIN - TAG CLOUD 🤙:
+- ☁️: [REPO CONG-MIN](https://github.com/cong-min/TagCloud)
+
 
