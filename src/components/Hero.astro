@@ -1,62 +1,69 @@
-<div class="w-full h-[90vh] flex justify-center">
-    <div
-        class="container flex flex-col h-72 absolute mt-4 md:mt-16 animate-fade-in-up px-4 md:px-52 z-40"
-    >
-        <section class="flex flex-col md:flex-row justify-between">
-            <h1
-                class="text-white font-bold text-3xl md:text-5xl order-2 md:order-1"
-            >
-                ¡Hola! Soy Carlos López
-                <p class="text-xl md:text-3xl pt-4 font-normal">
-                    Soy desarrollador de <span class="text-clstudio-pink"
-                        >software</span
-                    >
-                </p>
-            </h1>
-            <div
-                class="h-28 w-28 order-1 md:order-2 mt-10 mb-4 md:my-0 flex justify-center items-center bg-white rounded-full"
-            >
-                <img
-                    src="/img/CLStudio/CLStudio.png"
-                    class="h-12 inset-0 w-auto order-1 md:order-2"
-                />
-            </div>
-        </section>
-        <p
-            class="text-white font-light text-xl justify-start mt-8 pr-4 leading-relaxed z-40"
-        >
-            Especializado en desarrollo de videojuegos, pero también apasionado
-            por el desarrollo web. Con +6 años de experiencia programando y +4
-            años de experiencia profesional, estoy abierto a oportunidades en la
-            industria de videojuegos, aunque actualmente me encuentro en busca
-            activa de un puesto como desarrollador backend.
-        </p>
-        <section class="flex flex-row"></section>
-    </div>
-    <canvas class="background relative object-cover -z-20"> </canvas>
-</div>
-
 <script
     src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"
 ></script>
-
 <script type="module">
     window.onload = function () {
         Particles.init({
             selector: ".background",
             sizeVariations: 10,
-            color: ["#FFFFFF", "#CC147F", "#F2F2F2"],
+            color: [
+                "#FFFFFF",
+                "#CC147F",
+                "#F2F2F2",
+                "rgba(255, 255, 255, .5)",
+                "rgba(204, 20, 127, .5)",
+            ],
             particles: {
                 number: {
-                    value: 180,
-                    density: {
-                        enable: true,
-                        value_area: 1500,
+                    value: 200,
+                    density: { enable: true, value_area: 1500 },
+                },
+                shape: {
+                    type: "circle",
+                    stroke: { width: 0, color: "#000000" },
+                    polygon: { nb_sides: 5 },
+                    image: { src: "img/github.svg", width: 100, height: 100 },
+                },
+                opacity: {
+                    value: 0.5,
+                    random: true,
+                    anim: {
+                        enable: false,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false,
                     },
+                },
+                size: {
+                    value: 10,
+                    random: true,
+                    anim: {
+                        enable: false,
+                        speed: 40,
+                        size_min: 0.1,
+                        sync: false,
+                    },
+                },
+                line_linked: {
+                    enable: false,
+                    distance: 500,
+                    color: "#ffffff",
+                    opacity: 0.4,
+                    width: 2,
+                },
+                move: {
+                    enable: true,
+                    speed: 6,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                    attract: { enable: false, rotateX: 600, rotateY: 1200 },
                 },
             },
             opacity: {
-                value: 0.25,
+                value: 0.5,
                 random: true,
                 anim: {
                     enable: false,
@@ -65,16 +72,87 @@
                     sync: false,
                 },
             },
-            size: {
-                value: 3,
-                random: true,
-                anim: {
-                    enable: false,
-                    speed: 40,
-                    size_min: 0.5,
-                    sync: false,
-                },
-            },
         });
     };
 </script>
+
+<section class="container h-[91vh] flex justify-center">
+    <canvas class="background relative object-cover -z-20"> </canvas>
+    <div
+        class="absolute my-12 md:my-20 md:px-20 flex flex-col w-full h-auto animate-fade-in-up duration-200 z-40"
+    >
+        <div class="flex flex-col md:flex-row justify-between w-4/5 mx-auto">
+            <article
+                class="text-white order-2 justify-start items-start md:order-1 md:space-y-4 top-0"
+            >
+                <h2 class="font-bold text-2xl md:text-5xl text-title-text">
+                    ¡Hola!
+                </h2>
+                <h1 class="font-bold text-2xl md:text-5xl text-title-text">
+                    Soy <span class="text-clstudio-pink">Carlos</span> de CLStudio,
+                </h1>
+                <h2 class="font-bold text-xl md:text-4xl text-subtitle-text">
+                    Desarrollador de <span class="text-clstudio-pink"
+                        >software</span
+                    >
+                </h2>
+            </article>
+            <article
+                class="px-4 md:px-0 select-none order-1 md:order-2 mb-8 md:mb-0"
+            >
+                <img
+                    class="w-96 h-52 mx-auto my-auto rounded-lg glowRectangle"
+                    src="/img/Proyects/BEAT.gif"
+                />
+            </article>
+        </div>
+        <div class="w-4/5 mx-auto mt-4 md:-mt-5">
+            <span
+                class="border border-subtitle-text rounded-lg glowRectangleLite bg-white/25 backdrop-blur-lg px-4 py-2 font-extralight text-title-text"
+            >
+                <i
+                    class="fa-solid fa-circle fa-xs text-clstudio-pink pr-2 animate-flash animate-duration-1000 animate-ease-in-out animate-iteration-count-infinite"
+                ></i>
+                Disponible para trabajar
+            </span>
+        </div>
+        <p
+            class="font-light text-lg mt-10 md:text-2xl w-4/5 mx-auto text-body-text"
+        >
+            Especializado en <span class="text-clstudio-pink font-semibold"
+                >desarrollo web</span
+            > y apasionado por la programación y el diseño de videojuegos. Con <span
+                class="text-clstudio-pink font-semibold"
+                >+14 años de experiencia programando</span
+            > y <span class="text-clstudio-pink font-semibold"
+                >+8 años de experiencia profesional</span
+            >, estoy abierto a oportunidades de proyectos colaborativos y
+            experiencias nuevas dentro del sector de la programación y el
+            desarrollo. <span class="text-clstudio-pink font-semibold"
+                >Busco retos con los que aprender y crecer profesional y
+                personalmente</span
+            >.
+        </p>
+        <div
+            class="flex-row justify-between w-4/5 mt-8 mx-auto h-12 text-white"
+        >
+        </div>
+    </div>
+</section>
+
+<style>
+    .glowRectangle {
+        box-shadow:
+            0 0 20px rgba(255, 255, 255, 0.4),
+            0 0 40px rgba(255, 255, 255, 0.3),
+            0 0 60px rgba(255, 255, 255, 0.2),
+            0 0 80px rgba(255, 255, 255, 0.1);
+    }
+    .glowRectangleLite {
+        box-shadow:
+            0 0 20px rgba(255, 255, 255, 0.2),
+            0 0 40px rgba(255, 255, 255, 0.1),
+            0 0 60px rgba(255, 255, 255, 0.05),
+            0 0 80px rgba(255, 255, 255, 0.025);
+    }
+</style>

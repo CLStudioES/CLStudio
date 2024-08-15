@@ -4,13 +4,13 @@ import { Image } from "astro:assets";
 
 <header
     id="header"
-    class="text-white font-light sticky top-0 backdrop-blur-lg transition-all duration-200 md:px-28 mt-2 z-50"
+    class="text-white font-light sticky top-0 backdrop-blur-lg md:backdrop-blur-md transition-all duration-200 md:px-28 z-50 mx-auto"
 >
     <div
         class="mx-auto flex flex-wrap md:px-5 py-2 flex-col md:flex-row items-center"
     >
         <nav
-            class="order-2 md:order-1 md:mr-auto flex flex-wrap items-center text-wrap justify-center space-x-2 md:space-x-10"
+            class="order-2 md:order-1 md:mr-auto md:flex flex-wrap items-center text-wrap justify-center hidden md:space-x-10"
         >
             <a
                 class="hover:font-light hover:text-clstudio-pink transition-all duration-150 cursor-pointer flex flex-row"
@@ -117,14 +117,16 @@ import { Image } from "astro:assets";
                 >Contacto</a
             >
         </nav>
-        <a class="flex title-font font-medium items-center order-1 md:order-2">
+        <a
+            class="flex title-font font-medium items-center order-1 md:order-2 group"
+        >
             <Image
-                class="w-12 h-12 object-contain pointer-events-none"
-                src="/img/CLStudio/CLStudioWhiteLite.png"
+                class="w-24 h-24 md:w-12 md:h-12 object-contain"
+                src="/img/CLStudio/CLStudioWhiteLite.svg"
                 alt="Logo CLStudio"
                 width={400}
                 height={400}
-                format="png"
+                format="svg"
                 loading="eager"
             />
         </a>
@@ -138,7 +140,7 @@ import { Image } from "astro:assets";
     </style>
     <script>
         const header = document.getElementById("header");
-        const scrollThreshold = 10;
+        const scrollThreshold = 25;
         window.addEventListener("scroll", function () {
             const scrollPosition =
                 window.pageYOffset || document.documentElement.scrollTop;

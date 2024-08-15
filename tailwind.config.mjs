@@ -9,6 +9,10 @@ export default {
 			/*Normales*/
 			'white': '#FFFFFF',
 			'black': '#000000',
+			/*Texto*/
+			'title-text': '#f1f1f1',
+			'subtitle-text': '#8d8c8b',
+			'body-text': '#adadad',
 			/*Corporativos*/
 			'clstudio-pink': '#CC147F',
 			'clstudio-black': '#13151a',
