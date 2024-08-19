@@ -1,40 +1,41 @@
-<script type="module">
-    import TagCloud from "https://cdn.skypack.dev/TagCloud@2.3.2";
+---
+import SkillsSphere from "../components/skillsSphere.astro";
+---
 
-    const container = ".tagcloud-container";
-    const texts = [
-        "JavaScript",
-        "Html5",
-        "Css",
-        "C",
-        "Node",
-        "GitHub",
-        "Rest API",
-        "MySQL",
-        "C#",
-        "UI",
-        "C++",
-        "Unity",
-        "Flutter",
-        "Dart",
-        "TailwindCss",
-        "Astro",
-        "ChartJS",
-        "UX",
-    ];
-    const options = {
-        // containerClass: "tag-cloud",
-        // itemClass: "tag",
-        radius: 150,
-        direction: 180,
-        initSpeed: "slow",
-        maxSpeed: "slow",
-    };
-
-    TagCloud(container, texts, options);
-</script>
-
-<div class="container flex flex-col md:flex-row">
-    <div class="mx-auto"></div>
-    <div class="tagcloud-container text-white font-extralight mx-auto"></div>
+<div
+    class="container flex flex-col md:flex-row justify-center items-center mx-auto w-4/5"
+>
+    <div class="mx-auto">
+        <article
+            class="text-white order-2 justify-start items-start md:order-1 md:space-y-4 top-0"
+        >
+            <h2 class="font-bold text-2xl md:text-5xl text-title-text">
+                <span class="text-clstudio-pink">Skills</span> y herramientas
+            </h2>
+        </article>
+        <article class="w-auto mt-4 md:text-xl md:pr-24">
+            <p class="text-body-text font-light">
+                A lo largo de mi carrera como <span
+                    class="text-clstudio-pink font-semibold"
+                    >desarrollador web</span
+                > y de
+                <span class="text-clstudio-pink font-semibold"
+                    >aplicaciones móviles</span
+                >, he trabajado con diversas tecnologías y lenguajes de
+                programación. Mi curiosidad me ha llevado a explorar áreas como
+                <span class="text-clstudio-pink font-semibold"
+                    >bases de datos</span
+                >, <span class="text-clstudio-pink font-semibold"
+                    >desarrollo de videojuegos</span
+                >, <span class="text-clstudio-pink font-semibold"
+                    >desarrollo de software para sistemas empotrados</span
+                >...etc, lo que me ha convertido en un profesional más versátil
+                y preparado para los retos del mundo digital, siempre <span
+                    class="text-clstudio-pink font-semibold"
+                    >dispuesto a seguir aprendiendo</span
+                >.
+            </p>
+        </article>
+    </div>
+    <SkillsSphere />
 </div>

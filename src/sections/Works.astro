@@ -1,0 +1,71 @@
+<!--https://codepen.io/bibomato/pen/poqYzeq -->
+<script>
+    const stickySections = [...document.querySelectorAll(".sticky_wrap")];
+
+    window.addEventListener("scroll", (e) => {
+        for (let i = 0; i < stickySections.length; i++) {
+            transform(stickySections[i]);
+        }
+    });
+
+    function transform(section) {
+        const offsetTop = section.parentElement.offsetTop;
+
+        const scrollSection = section.querySelector(".horizontal_scroll");
+        const percentajeScrollLabel = document.getElementById(
+            "percentajeScrollLabel",
+        );
+
+        let percentage =
+            ((window.scrollY - offsetTop) / window.innerHeight) * 100;
+
+        percentage = percentage < 0 ? 0 : percentage > 300 ? 300 : percentage;
+        console.log(percentage);
+        percentajeScrollLabel.textContent = Math.trunc(percentage).toString();
+
+        scrollSection.style.transform = `translate3d(${-percentage}vw, 0, 0)`;
+    }
+</script>
+<div class="scroll_container">
+    <div class="sticky_wrap">
+        <div class="horizontal_scroll">
+            <div class="scroll_contents bg-white"></div>
+            <div class="scroll_contents bg-clstudio-pink"></div>
+        </div>
+    </div>
+</div>
+<div class="container h-24 w-full bg-white text-black">
+    <span class="text-4xl" id="percentajeScrollLabel">Hola</span>
+</div>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        scroll-behavior: smooth;
+    }
+    .scroll_container {
+        height: 400vh;
+    }
+
+    .horizontal_scroll {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 400vw;
+        will-change: transform;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .scroll_contents {
+        height: 100%;
+        width: 200vw;
+    }
+
+    .sticky_wrap {
+        overflow: hidden;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+    }
+</style>

@@ -1,0 +1,16 @@
+---
+interface Props {
+    title: string;
+    iconURL: string;
+}
+
+const { title, iconURL } = Astro.props;
+---
+
+<div
+    class="border border-subtitle-text rounded-lg glowRectangleLite bg-white/25 backdrop-blur-lg px-4 py-2 font-extralight text-title-text flex flex-row justify-center items-center hover:animate-tilt transition-transform animate-duration-faster"
+>
+    <img src={iconURL} class="text-clstudio-pink pr-2 h-5" />
+
+    {title}
+</div>
