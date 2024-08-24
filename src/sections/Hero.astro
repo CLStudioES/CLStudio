@@ -80,22 +80,30 @@ import RrssButton from "../components/rrssButton.astro";
     };
 </script>
 
-<section class="container h-[91vh] flex justify-center mx-auto">
+<section class="h-[100vh] flex justify-center mx-auto">
     <canvas class="background relative object-cover -z-20"> </canvas>
     <article
-        class="absolute my-12 md:my-20 md:px-20 flex flex-col w-full h-auto animate-fade-in-up duration-200 z-40"
+        class="absolute px-36 flex flex-col animate-fade-in-up duration-200 z-40"
     >
-        <div class="flex flex-col md:flex-row justify-between w-4/5 mx-auto">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center w-4/5 mx-auto lg:mt-56"
+        >
             <article
-                class="text-white order-2 justify-start items-start md:order-1 md:space-y-4 top-0"
+                class="text-white order-2 justify-start items-start md:order-1 md:space-y-4 lg:space-y-6 top-0"
             >
-                <h2 class="font-bold text-2xl md:text-5xl text-title-text">
+                <h2
+                    class="font-bold text-2xl md:text-5xl lg:text-7xl text-title-text"
+                >
                     ¡Hola!
                 </h2>
-                <h1 class="font-bold text-2xl md:text-5xl text-title-text">
+                <h1
+                    class="font-bold text-2xl md:text-5xl lg:text-7xl text-title-text"
+                >
                     Soy <span class="text-clstudio-pink">Carlos</span> de CLStudio,
                 </h1>
-                <h2 class="font-bold text-xl md:text-4xl text-subtitle-text">
+                <h2
+                    class="font-bold text-xl md:text-4xl lg:text-6xl text-subtitle-text"
+                >
                     Desarrollador de <span class="text-clstudio-pink"
                         >software</span
                     >
@@ -105,12 +113,12 @@ import RrssButton from "../components/rrssButton.astro";
                 class="px-4 md:px-0 select-none order-1 md:order-2 mb-8 md:mb-0"
             >
                 <img
-                    class="w-96 h-52 mx-auto my-auto rounded-lg glowRectangle"
+                    class="w-96 h-52 lg:h-72 lg:w-auto mx-auto my-auto rounded-lg glowRectangle"
                     src="/img/Proyects/BEAT.gif"
                 />
             </article>
         </div>
-        <div class="w-4/5 mx-auto mt-4 md:-mt-3">
+        <div class="w-4/5 mx-auto mt-4 lg:mt-6">
             <span
                 class="border border-subtitle-text rounded-lg glowRectangleLite bg-white/25 backdrop-blur-lg px-4 py-2 font-extralight text-title-text"
             >
@@ -121,7 +129,7 @@ import RrssButton from "../components/rrssButton.astro";
             </span>
         </div>
         <p
-            class="font-light text-lg mt-10 md:text-2xl w-4/5 mx-auto text-body-text"
+            class="font-light text-lg mt-10 lg:mt-16 md:text-2xl lg:text-3xl w-4/5 mx-auto text-body-text"
         >
             Especializado en <span class="text-clstudio-pink font-semibold"
                 >desarrollo web</span
@@ -138,7 +146,7 @@ import RrssButton from "../components/rrssButton.astro";
             >.
         </p>
         <div
-            class="flex-row justify-between w-4/5 mt-6 mx-auto h-12 text-white space-x-4"
+            class="flex-row justify-between w-4/5 mt-6 lg:mt-8 mx-auto h-12 text-white space-x-4 lg:space-x-6"
         >
             <RrssButton
                 imagesrc="/img/rrss/github.svg"
