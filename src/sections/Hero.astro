@@ -80,29 +80,27 @@ import RrssButton from "../components/rrssButton.astro";
     };
 </script>
 
-<section class="h-[100vh] flex justify-center mx-auto">
+<section class="h-[95vh] lg:h-[100vh] flex justify-center mx-auto items-center">
     <canvas class="background relative object-cover -z-20"> </canvas>
     <article
-        class="absolute lg:px-36 flex flex-col animate-fade-in-up duration-200 z-40"
+        class="absolute lg:px-36 flex flex-col animate-fade-in-up duration-200 z-40 my-auto"
     >
         <div
-            class="flex flex-col md:flex-row justify-between items-center w-4/5 mx-auto lg:mt-56"
+            class="flex flex-col md:flex-row justify-between items-center w-4/5 mx-auto"
         >
             <article
-                class="text-white order-2 justify-start items-start md:order-1 md:space-y-4 lg:space-y-6 top-0"
+                class="text-white order-2 justify-start items-start md:order-1 top-0"
             >
-                <h2
-                    class="font-bold text-2xl md:text-5xl lg:text-7xl text-title-text"
-                >
+                <h2 class="font-bold text-2xl md:text-7xl text-title-text">
                     ¡Hola!
                 </h2>
                 <h1
-                    class="font-bold text-2xl md:text-5xl lg:text-7xl text-title-text"
+                    class="font-bold text-2xl md:text-7xl text-title-text space-y-4"
                 >
-                    Soy <span class="text-clstudio-pink">Carlos</span> de CLStudio,
+                    Soy <span class="text-clstudio-pink pb-4">Carlos</span> de CLStudio,
                 </h1>
                 <h2
-                    class="font-bold text-xl md:text-4xl lg:text-6xl text-subtitle-text"
+                    class="font-bold text-xl md:text-4xl text-subtitle-text mt-1"
                 >
                     Desarrollador de <span class="text-clstudio-pink"
                         >software</span
@@ -118,7 +116,7 @@ import RrssButton from "../components/rrssButton.astro";
                 />
             </article>
         </div>
-        <div class="w-4/5 mx-auto mt-4 lg:mt-6">
+        <div class="w-4/5 mx-auto mt-4">
             <span
                 class="border border-subtitle-text rounded-lg glowRectangleLite bg-white/25 backdrop-blur-lg px-4 py-2 font-extralight text-title-text"
             >
@@ -129,7 +127,7 @@ import RrssButton from "../components/rrssButton.astro";
             </span>
         </div>
         <p
-            class="font-light text-lg mt-10 lg:mt-16 md:text-2xl lg:text-3xl w-4/5 mx-auto text-body-text"
+            class="font-light text-lg mt-10 lg:mt-16 md:text-2xl w-4/5 mx-auto text-body-text"
         >
             Especializado en <span class="text-clstudio-pink font-semibold"
                 >desarrollo web</span
