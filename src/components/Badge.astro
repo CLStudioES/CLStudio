@@ -8,9 +8,32 @@ const { title, iconURL } = Astro.props;
 ---
 
 <div
-    class="border border-subtitle-text rounded-lg glowRectangleLite bg-white/25 backdrop-blur-lg px-4 py-2 font-extralight text-title-text flex flex-row justify-center items-center hover:animate-tilt transition-transform animate-duration-faster"
+    class="border border-clstudio-pink border-opacity-50 rounded-lg glowRectangleLite bg-clstudio-black backdrop-blur-lg px-4 py-2 font-extralight text-title-text flex flex-row justify-center items-center mr-4"
 >
-    <img src={iconURL} class="text-clstudio-pink pr-2 h-5" />
+    <img src={iconURL} class="group-hover: pr-2 h-5" />
 
-    {title}
+    <span class="">{title}</span>
 </div>
+<style>
+    .glowRectangle {
+        box-shadow:
+            0 0 20px rgba(255, 255, 255, 0.4),
+            0 0 40px rgba(255, 255, 255, 0.3),
+            0 0 60px rgba(255, 255, 255, 0.2),
+            0 0 80px rgba(255, 255, 255, 0.1);
+    }
+    .glowRectangleLite {
+        box-shadow:
+            0 0 20px rgba(255, 255, 255, 0.2),
+            0 0 40px rgba(255, 255, 255, 0.1),
+            0 0 60px rgba(255, 255, 255, 0.05),
+            0 0 80px rgba(255, 255, 255, 0.025);
+    }
+    .glowRectangleLitePink {
+        box-shadow:
+            0 0 20px rgba(204, 20, 127, 0.2),
+            0 0 40px rgba(204, 20, 127, 0.1),
+            0 0 60px rgba(204, 20, 127, 0.05),
+            0 0 80px rgba(204, 20, 127, 0.025);
+    }
+</style>

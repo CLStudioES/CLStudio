@@ -1,3 +1,8 @@
+---
+import WorksScrollLeft from "../components/worksScrollLeft.astro";
+import WorksScrollRight from "../components/worksScrollRight.astro";
+---
+
 <!--https://codepen.io/bibomato/pen/poqYzeq -->
 <script>
     const stickySections = [...document.querySelectorAll(".sticky_wrap")];
@@ -26,39 +31,39 @@
         scrollSection.style.transform = `translate3d(${-percentage}vw, 0, 0)`;
     }
 </script>
-<div class="scroll_container">
+<div class="hidden md:flex scroll_container">
     <div class="sticky_wrap">
+        <!-- <h1 class="text-4xl text-white">Mis trabajos más destacados</h1> -->
         <div class="horizontal_scroll">
-            <div class="bg-white"></div>
-            <div class="bg-clstudio-pink"></div>
+            <WorksScrollLeft />
+            <WorksScrollRight />
         </div>
     </div>
+    <!-- <div class="container h-24 w-screen bg-white text-black">
+        <span class="text-4xl" id="percentajeScrollLabel">Hola</span>
+    </div> -->
+    <style>
+        * {
+            width: 100%;
+            scroll-behavior: smooth;
+        }
+        .scroll_container {
+            height: 400vh;
+        }
+        .sticky_wrap {
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+        }
+        .horizontal_scroll {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 400vw;
+            will-change: transform;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
 </div>
-
-<!-- <div class="container h-24 w-screen bg-white text-black">
-    <span class="text-4xl" id="percentajeScrollLabel">Hola</span>
-</div> -->
-<style>
-    * {
-        width: 100%;
-        scroll-behavior: smooth;
-    }
-    .scroll_container {
-        height: 400vh;
-    }
-    .sticky_wrap {
-        overflow: hidden;
-        position: sticky;
-        top: 0;
-        height: 100vh;
-    }
-    .horizontal_scroll {
-        position: absolute;
-        top: 0;
-        height: 100%;
-        width: 400vw;
-        will-change: transform;
-        display: flex;
-        justify-content: space-between;
-    }
-</style>

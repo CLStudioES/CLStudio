@@ -13,6 +13,7 @@ export default {
 			'title-text': '#f1f1f1',
 			'subtitle-text': '#8d8c8b',
 			'body-text': '#adadad',
+			'body-text-lighty': '#f3f3f3',
 			/*Corporativos*/
 			'clstudio-pink': '#CC147F',
 			'clstudio-black': '#13151a',
