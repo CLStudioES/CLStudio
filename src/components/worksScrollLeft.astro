@@ -5,8 +5,9 @@ import Badge from "./Badge.astro";
 <section class="flex flex-row justify-around mt-12">
     <!--Gipfarma -->
     <article
+        id="gipfarma"
         onclick="window.open('https://gipfarma.com/', '_blank')"
-        class="group cursor-pointer select-none h-auto w-3/12 px-12 flex flex-col my-auto border border-subtitle-text rounded-lg glowRectangleLite bg-white/25 backdrop-blur-xl py-12 font-extralight text-title-text"
+        class="overflow-y-auto max-h-[75vh] group cursor-pointer select-none h-auto w-3/12 px-12 flex flex-col my-auto border border-subtitle-text rounded-lg glowRectangleLite bg-white/40 backdrop-blur-xl py-12 font-extralight text-title-text hover:scale-105 transition-transform duration-200"
     >
         <header class="flex flex-col justify-start">
             <h2
@@ -57,21 +58,27 @@ import Badge from "./Badge.astro";
                     class="font-semibold text-clstudio-pink">innovación</span
                 > del equipo manteniendo las últimas tecnologías.
             </p>
+            <footer class="flex flex-row justify-start mt-8">
+                <Badge
+                    title="Colaboración"
+                    iconURL="/img/Badges/collaboration.svg"
+                />
+                <Badge
+                    title="JavaScript"
+                    iconURL="/img/Badges/javascript.svg"
+                />
+                <Badge title="AngularJS" iconURL="/img/Badges/angular.svg" />
+                <Badge
+                    title="TailwindCSS"
+                    iconURL="/img/Badges/tailwindcss.svg"
+                />
+            </footer>
         </body>
-        <footer class="flex flex-row justify-start mt-8">
-            <Badge
-                title="Colaboración"
-                iconURL="/img/Badges/collaboration.svg"
-            />
-            <Badge title="JavaScript" iconURL="/img/Badges/javascript.svg" />
-            <Badge title="AngularJS" iconURL="/img/Badges/angular.svg" />
-            <Badge title="TailwindCSS" iconURL="/img/Badges/tailwindcss.svg" />
-        </footer>
     </article>
     <!--Optimafar -->
     <article
         onclick="window.open('https://optimafar.com/', '_blank')"
-        class="group cursor-pointer select-none h-auto w-3/12 px-12 flex flex-col my-auto border border-subtitle-text rounded-lg glowRectangleLite bg-white/25 backdrop-blur-xl py-12 font-extralight text-title-text"
+        class="overflow-y-auto max-h-[75vh] group cursor-pointer select-none h-auto w-3/12 px-12 flex flex-col my-auto border border-subtitle-text rounded-lg glowRectangleLite bg-white/40 backdrop-blur-xl py-12 font-extralight text-title-text hover:scale-105 transition-transform duration-200"
     >
         <header class="flex flex-col justify-start">
             <h2
@@ -136,18 +143,21 @@ import Badge from "./Badge.astro";
                     >avanzando en mi carrera como desarrollador</span
                 >.
             </p>
+            <footer class="flex flex-row justify-start mt-8">
+                <Badge
+                    title="JavaScript"
+                    iconURL="/img/Badges/javascript.svg"
+                />
+                <Badge title="Flutter" iconURL="/img/Badges/flutter.svg" />
+                <Badge title="Frontend" iconURL="/img/Badges/ui.svg" />
+                <Badge title="Backend" iconURL="/img/Badges/backend.svg" />
+            </footer>
         </body>
-        <footer class="flex flex-row justify-start mt-8">
-            <Badge title="JavaScript" iconURL="/img/Badges/javascript.svg" />
-            <Badge title="Flutter" iconURL="/img/Badges/flutter.svg" />
-            <Badge title="Frontend" iconURL="/img/Badges/ui.svg" />
-            <Badge title="Backend" iconURL="/img/Badges/backend.svg" />
-        </footer>
     </article>
     <!--Capsula cultura -->
     <article
         onclick="window.open('https://espacio.fundaciontelefonica.com/evento/que-la-fuerza-de-unity-te-acompane-taller-de-creacion-de-videojuegos-i-y-ii/', '_blank')"
-        class="group cursor-pointer select-none h-auto w-3/12 px-12 flex flex-col my-auto border border-subtitle-text rounded-lg glowRectangleLite bg-white/25 backdrop-blur-xl py-12 font-extralight text-title-text"
+        class="overflow-y-auto max-h-[75vh] group cursor-pointer select-none h-auto w-3/12 px-12 flex flex-col my-auto border border-subtitle-text rounded-lg glowRectangleLite bg-white/40 backdrop-blur-xl py-12 font-extralight text-title-text hover:scale-105 transition-transform duration-200"
     >
         <header class="flex flex-col justify-start">
             <h2
@@ -198,19 +208,19 @@ import Badge from "./Badge.astro";
                 poder enseñar programación y fue una experiencia única que me
                 gustaría repetir.
             </p>
+            <footer class="flex flex-row justify-start mt-8">
+                <Badge
+                    title="Colaboración"
+                    iconURL="/img/Badges/collaboration.svg"
+                />
+                <Badge
+                    title="Comunicación"
+                    iconURL="/img/Badges/comunication.svg"
+                />
+                <Badge title="C#" iconURL="/img/Badges/csharp.svg" />
+                <Badge title="Unity" iconURL="/img/Badges/unity.svg" />
+            </footer>
         </body>
-        <footer class="flex flex-row justify-start mt-8">
-            <Badge
-                title="Colaboración"
-                iconURL="/img/Badges/collaboration.svg"
-            />
-            <Badge
-                title="Comunicación"
-                iconURL="/img/Badges/comunication.svg"
-            />
-            <Badge title="C#" iconURL="/img/Badges/csharp.svg" />
-            <Badge title="Unity" iconURL="/img/Badges/unity.svg" />
-        </footer>
     </article>
 </section>
 
