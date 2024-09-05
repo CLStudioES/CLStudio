@@ -1,41 +1,50 @@
 ---
-import SkillsSphere from "../components/skillsSphere.astro";
+import HardSkillsSphere from "../components/hardSkillsSphere.astro";
+import SoftSkillsSphere from "../components/softSkillsSphere.astro";
 ---
 
-<div
-    class="container flex flex-col md:flex-row justify-center items-center mx-auto w-4/5"
->
-    <div class="mx-auto">
-        <article
-            class="text-white order-2 justify-start items-start md:order-1 md:space-y-4 top-0"
-        >
-            <h2 class="font-bold text-2xl md:text-5xl text-title-text">
-                <span class="text-clstudio-pink">Skills</span> y herramientas
-            </h2>
-        </article>
-        <article class="w-auto mt-4 md:text-xl lg:text-2xl md:pr-24 lg:pr-36">
-            <p class="text-body-text font-light lg:text-xl">
-                A lo largo de mi carrera como <span
-                    class="text-clstudio-pink font-semibold"
-                    >desarrollador web</span
-                > y de
-                <span class="text-clstudio-pink font-semibold"
-                    >aplicaciones móviles</span
-                >, he trabajado con diversas tecnologías y lenguajes de
-                programación. Mi curiosidad me ha llevado a explorar áreas como
-                <span class="text-clstudio-pink font-semibold"
-                    >bases de datos</span
-                >, <span class="text-clstudio-pink font-semibold"
-                    >desarrollo de videojuegos</span
-                >, <span class="text-clstudio-pink font-semibold"
-                    >desarrollo de software para sistemas empotrados</span
-                >...etc, lo que me ha convertido en un profesional más versátil
-                y preparado para los retos del mundo digital, siempre <span
-                    class="text-clstudio-pink font-semibold"
-                    >dispuesto a seguir aprendiendo</span
-                >.
-            </p>
-        </article>
+<section class="pt-12 px-24">
+    <h2 class="font-light text-4xl text-title-text">02 - Soft & Hard Skills</h2>
+    <p class="font-extralight text-xl text-subtitle-text py-2">
+        Aquí puedes ver un resumen de mis skills.
+    </p>
+    <!--Hard skills -->
+    <div
+        class="flex flex-col md:flex-row justify-center items-center mx-auto w-full pl-12"
+    >
+        <div class="mx-auto">
+            <article
+                class="text-white order-2 justify-start items-start md:order-1 md:space-y-4 top-0"
+            >
+                <h2 class="font-bold text-2xl text-title-text">
+                    <span class="text-clstudio-pink">Hard</span> skills
+                </h2>
+            </article>
+            <article class="w-auto mt-4 text-lg md:pr-24 lg:pr-36">
+                <p class="text-body-text font-light lg:text-lg">
+                    A lo largo de mi carrera como <span
+                        class="text-clstudio-pink font-semibold"
+                        >desarrollador web</span
+                    > y de
+                    <span class="text-clstudio-pink font-semibold"
+                        >aplicaciones móviles</span
+                    >, he trabajado con diversas tecnologías y lenguajes de
+                    programación. Mi curiosidad me ha llevado a explorar áreas
+                    como
+                    <span class="text-clstudio-pink font-semibold"
+                        >bases de datos</span
+                    >, <span class="text-clstudio-pink font-semibold"
+                        >desarrollo de videojuegos</span
+                    >, <span class="text-clstudio-pink font-semibold"
+                        >desarrollo de software para sistemas empotrados</span
+                    >...etc, lo que me ha convertido en un profesional más
+                    versátil y preparado para los retos del mundo digital,
+                    siempre <span class="text-clstudio-pink font-semibold"
+                        >dispuesto a seguir aprendiendo</span
+                    >.
+                </p>
+            </article>
+        </div>
+        <HardSkillsSphere />
     </div>
-    <SkillsSphere />
-</div>
+</section>

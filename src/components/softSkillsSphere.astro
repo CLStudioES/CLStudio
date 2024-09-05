@@ -1,0 +1,36 @@
+<script type="module">
+    import TagCloud from "https://cdn.skypack.dev/TagCloud@2.3.2";
+
+    const container = ".tagcloud-container";
+    const texts = [
+        "JavaScript",
+        "Html5",
+        "Css",
+        "C",
+        "Node",
+        "GitHub",
+        "Rest API",
+        "MySQL",
+        "C#",
+        "UI",
+        "C++",
+        "Unity",
+        "Flutter",
+        "Dart",
+        "TailwindCss",
+        "Astro",
+        "ChartJS",
+        "UX",
+    ];
+    const options = {
+        // containerClass: "tag-cloud",
+        // itemClass: "tag",
+        radius: 150,
+        direction: 180,
+        initSpeed: "slow",
+        maxSpeed: "slow",
+    };
+
+    TagCloud(container, texts, options);
+</script>
+<div class="tagcloud-container text-white font-extralight mx-auto"></div>
