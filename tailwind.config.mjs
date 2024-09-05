@@ -16,9 +16,12 @@ export default {
 			'body-text-lighty': '#f3f3f3',
 			/*Corporativos*/
 			'clstudio-pink': '#CC147F',
+			'clstudio-pink-light': '#f5b5da',
 			'clstudio-black': '#13151a',
 		},
-		extend: {},
+		extend: {
+
+		},
 	},
 	plugins: [
 		animations

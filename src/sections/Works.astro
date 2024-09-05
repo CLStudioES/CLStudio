@@ -40,23 +40,19 @@ import WorksScrollRight from "../components/worksScrollRight.astro";
                 >%</span
             >
         </div>
+        <div class="absolute top-[13vh] left-[5vw]">
+            <h2 class="font-light text-4xl text-title-text">
+                01 - Mi experiencia destacada
+            </h2>
+            <p class="font-extralight text-xl text-subtitle-text py-2">
+                Puedes ver el resto de experiencia laboral en mi <span
+                    class="text-clstudio-pink font-semibold">CV</span
+                >.
+            </p>
+        </div>
         <div class="horizontal_scroll justify-around">
             <WorksScrollLeft />
             <WorksScrollRight />
-        </div>
-        <div class="centered-container-front flex items-center justify-center">
-            <article
-                id="gipfarma"
-                onclick="window.open('https://github.com/CLStudioES', '_blank')"
-                class="group cursor-pointer flex flex-row border border-subtitle-text rounded-lg glowRectangleLite bg-white/40 backdrop-blur-xl px-4 py-6 font-extralight text-title-text hover:scale-105 transition-transform duration-200"
-            >
-                <span>
-                    <img
-                        src="/img/icons/plus.svg"
-                        class="group-hover:animate-sway transition-transform duration-200 h-12"
-                    /></span
-                >
-            </article>
         </div>
         <style>
             .glowRectangle {
@@ -89,7 +85,7 @@ import WorksScrollRight from "../components/worksScrollRight.astro";
             }
             .horizontal_scroll {
                 position: absolute;
-                top: 0;
+                top: 5vh;
                 height: 100%;
                 width: 400vw;
                 will-change: transform;
@@ -98,7 +94,7 @@ import WorksScrollRight from "../components/worksScrollRight.astro";
             }
             .centered-container {
                 position: absolute;
-                top: 50%;
+                top: 57%;
                 left: 45%;
                 transform: translate(-50%, -50%);
                 width: 800px;
@@ -110,6 +106,17 @@ import WorksScrollRight from "../components/worksScrollRight.astro";
                 position: absolute;
                 top: 92.5%;
                 left: 50%;
+                transform: translate(-50%, -50%);
+                width: 150px;
+                height: 100px;
+                padding: 20px;
+                z-index: 10;
+                /* Add other styles as needed */
+            }
+            .container-title-section {
+                position: absolute;
+                top: 14.5%;
+                left: 7.5%;
                 transform: translate(-50%, -50%);
                 width: 150px;
                 height: 100px;
