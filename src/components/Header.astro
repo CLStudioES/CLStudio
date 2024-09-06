@@ -2,6 +2,44 @@
 import { Image } from "astro:assets";
 ---
 
+<script>
+    //Checkeamos la sección activa para modificar el color del navbar
+    const sections = document.querySelectorAll("section");
+    const experienciaLabel = document.getElementById("experienciaLabel");
+    const skillsLabel = document.getElementById("skillsLabel");
+
+    const observer = new IntersectionObserver(handleIntersection, {
+        root: null,
+        rootMargin: "0px", // No margin
+        threshold: 0.1, // Varemo
+    });
+
+    sections.forEach((section) => {
+        observer.observe(section);
+    });
+
+    function handleIntersection(entries) {
+        const visibleSectionIds = [];
+        const active = ["text-clstudio-pink", "font-bold"];
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const sectionId = entry.target.id;
+                visibleSectionIds.push(sectionId);
+            }
+        });
+        if (visibleSectionIds[0] === "Hero") {
+            experienciaLabel.classList.remove(...active);
+            skillsLabel.classList.remove(...active);
+        } else if (visibleSectionIds[0] === "Works") {
+            experienciaLabel.classList.add(...active);
+            skillsLabel.classList.remove(...active);
+        } else if (visibleSectionIds[0] === "Skills") {
+            experienciaLabel.classList.remove(...active);
+            skillsLabel.classList.add(...active);
+        }
+    }
+    //Fin checkeo navbar
+</script>
 <header
     id="header"
     class="z-50 w-[90%] text-white font-light sticky top-0 backdrop-blur-lg md:backdrop-blur-md transition-all duration-200 md:px-28 mx-auto"
@@ -13,7 +51,7 @@ import { Image } from "astro:assets";
             class="order-2 md:order-1 md:mr-auto md:flex flex-wrap items-center text-wrap justify-center hidden md:space-x-10"
         >
             <a
-                href="#Experiencia"
+                id="experienciaLabel"
                 class="scroll-link hover:font-light hover:text-clstudio-pink transition-all duration-150 cursor-pointer flex flex-row"
                 ><svg
                     width="23"
@@ -33,7 +71,7 @@ import { Image } from "astro:assets";
                 >Experiencia</a
             >
             <a
-                href="#Skills"
+                id="skillsLabel"
                 class="scroll-link hover:font-light hover:text-clstudio-pink transition-all duration-150 cursor-pointer flex flex-row"
             >
                 <svg
@@ -126,7 +164,7 @@ import { Image } from "astro:assets";
             class="flex title-font font-medium items-center order-1 md:order-2 group"
         >
             <Image
-                class="w-24 h-24 md:w-12 md:h-12 object-contain"
+                class="w-24 h-24 md:w-12 md:h-12 object-contain mx-auto"
                 src="/img/CLStudio/CLStudioWhiteLite.svg"
                 alt="Logo CLStudio"
                 width={400}
@@ -136,28 +174,27 @@ import { Image } from "astro:assets";
             />
         </a>
     </div>
-
-    <style>
-        .glassmorphism {
-            background-color: rgba(0, 0, 0, 0.5);
-            box-shadow: 0 25px 40px rgba(255, 255, 255, 0.1);
-            width: 90%;
-            border-bottom-left-radius: 25px;
-            border-bottom-right-radius: 25px;
-        }
-    </style>
-    <script>
-        const header = document.getElementById("header");
-        const scrollThreshold = 25;
-        window.addEventListener("scroll", function () {
-            const scrollPosition =
-                window.pageYOffset || document.documentElement.scrollTop;
-
-            if (scrollPosition >= scrollThreshold) {
-                header.classList.add("glassmorphism");
-            } else {
-                header.classList.remove("glassmorphism");
-            }
-        });
-    </script>
 </header>
+<style>
+    .glassmorphism {
+        background-color: rgba(0, 0, 0, 0.5);
+        box-shadow: 0 25px 40px rgba(255, 255, 255, 0.1);
+        width: 90%;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+</style>
+<script>
+    const header = document.getElementById("header");
+    const scrollThreshold = 25;
+    window.addEventListener("scroll", function () {
+        const scrollPosition =
+            window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollPosition >= scrollThreshold) {
+            header.classList.add("glassmorphism");
+        } else {
+            header.classList.remove("glassmorphism");
+        }
+    });
+</script>
