@@ -33,13 +33,8 @@ import WorksScrollRight from "../components/worksScrollRight.astro";
         scrollSection.style.transform = `translate3d(${-percentage}vw, 0, 0)`;
     }
 </script>
-<section id="Works" class="hidden md:flex scroll_container">
+<section id="Works" class="md:scroll_container px-8">
     <div class="sticky_wrap">
-        <div class="centered-container">
-            <span class="centered-text font-semibold" id="percentajeScrollLabel"
-                >%</span
-            >
-        </div>
         <div class="absolute top-[13vh] left-[5vw]">
             <h2 class="font-light text-4xl text-title-text">
                 01 - Mi experiencia destacada
@@ -50,7 +45,12 @@ import WorksScrollRight from "../components/worksScrollRight.astro";
                 >.
             </p>
         </div>
-        <div class="horizontal_scroll justify-around">
+        <div class="centered-container hidden md:flex">
+            <span class="centered-text font-semibold" id="percentajeScrollLabel"
+                >%</span
+            >
+        </div>
+        <div class="horizontal_scroll justify-around hidden md:flex">
             <WorksScrollLeft />
             <WorksScrollRight />
         </div>
@@ -89,7 +89,6 @@ import WorksScrollRight from "../components/worksScrollRight.astro";
                 height: 100%;
                 width: 400vw;
                 will-change: transform;
-                display: flex;
                 justify-content: space-between;
             }
             .centered-container {
