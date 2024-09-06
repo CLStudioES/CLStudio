@@ -27,18 +27,36 @@ import { Image } from "astro:assets";
                 visibleSectionIds.push(sectionId);
             }
         });
-        if (visibleSectionIds[0] === "Hero") {
+        if (visibleSectionIds[0] === "hero") {
             experienciaLabel.classList.remove(...active);
             skillsLabel.classList.remove(...active);
-        } else if (visibleSectionIds[0] === "Works") {
+        } else if (visibleSectionIds[0] === "experiencia") {
             experienciaLabel.classList.add(...active);
             skillsLabel.classList.remove(...active);
-        } else if (visibleSectionIds[0] === "Skills") {
+        } else if (visibleSectionIds[0] === "skills") {
             experienciaLabel.classList.remove(...active);
             skillsLabel.classList.add(...active);
         }
     }
     //Fin checkeo navbar
+</script>
+<script type='text/javascript"'>
+    //Comportamiento del scroll al clicar en opciones del navbar
+    const navLinks = document.querySelectorAll("nav a");
+
+    navLinks.forEach((link) => {
+        link.addEventListener("click", (event) => {
+            event.preventDefault(); // Prevent the default link behavior
+            const targetId = event.target.getAttribute("href");
+            const targetSection = document.querySelector(targetId);
+            targetSection.scrollIntoView({
+                behavior: "smooth",
+                block: "start", // Align the top of the section with the top of the viewport
+                inline: "nearest", // Align the section horizontally with the nearest edge of the viewport
+            });
+        });
+    });
+    //FinComportamiento del scroll al clicar en opciones del navbar
 </script>
 <header
     id="header"
@@ -51,6 +69,7 @@ import { Image } from "astro:assets";
             class="order-2 md:order-1 md:mr-auto md:flex flex-wrap items-center text-wrap justify-center hidden md:space-x-10"
         >
             <a
+                href="#experiencia"
                 id="experienciaLabel"
                 class="scroll-link hover:font-light hover:text-clstudio-pink transition-all duration-150 cursor-pointer flex flex-row"
                 ><svg
@@ -71,6 +90,7 @@ import { Image } from "astro:assets";
                 >Experiencia</a
             >
             <a
+                href="#skills"
                 id="skillsLabel"
                 class="scroll-link hover:font-light hover:text-clstudio-pink transition-all duration-150 cursor-pointer flex flex-row"
             >
@@ -96,7 +116,7 @@ import { Image } from "astro:assets";
                 >Skills</a
             >
             <a
-                href="#Proyectos"
+                href="#proyectos"
                 class="scroll-link hover:font-light hover:text-clstudio-pink transition-all duration-150 cursor-pointer flex flex-row"
                 ><svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +138,7 @@ import { Image } from "astro:assets";
                 >Proyectos</a
             >
             <a
-                href="#Sobre"
+                href="#sobre-mi"
                 class="scroll-link hover:font-light hover:text-clstudio-pink transition-all duration-150 cursor-pointer flex flex-row"
                 ><svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -138,7 +158,7 @@ import { Image } from "astro:assets";
                 >Sobre mi</a
             >
             <a
-                href="#Contacto"
+                href="#contacto"
                 class="scroll-link hover:font-light hover:text-clstudio-pink transition-all duration-150 cursor-pointer flex flex-row"
             >
                 <svg
