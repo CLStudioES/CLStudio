@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 
 <header
     id="header"
-    class="text-white font-light sticky top-0 backdrop-blur-lg md:backdrop-blur-md transition-all duration-200 md:px-28 z-50 mx-auto"
+    class="z-50 w-[90%] text-white font-light sticky top-0 backdrop-blur-lg md:backdrop-blur-md transition-all duration-200 md:px-28 mx-auto"
 >
     <div
         class="mx-auto flex flex-wrap md:px-5 py-2 flex-col md:flex-row items-center"
@@ -13,7 +13,8 @@ import { Image } from "astro:assets";
             class="order-2 md:order-1 md:mr-auto md:flex flex-wrap items-center text-wrap justify-center hidden md:space-x-10"
         >
             <a
-                class="hover:font-light hover:text-clstudio-pink transition-all duration-150 cursor-pointer flex flex-row"
+                href="#Experiencia"
+                class="scroll-link hover:font-light hover:text-clstudio-pink transition-all duration-150 cursor-pointer flex flex-row"
                 ><svg
                     width="23"
                     height="23"
@@ -32,7 +33,8 @@ import { Image } from "astro:assets";
                 >Experiencia</a
             >
             <a
-                class="hover:font-light hover:text-clstudio-pink transition-all duration-150 cursor-pointer flex flex-row"
+                href="#Skills"
+                class="scroll-link hover:font-light hover:text-clstudio-pink transition-all duration-150 cursor-pointer flex flex-row"
             >
                 <svg
                     width="23"
@@ -56,7 +58,8 @@ import { Image } from "astro:assets";
                 >Skills</a
             >
             <a
-                class="hover:font-light hover:text-clstudio-pink transition-all duration-150 cursor-pointer flex flex-row"
+                href="#Proyectos"
+                class="scroll-link hover:font-light hover:text-clstudio-pink transition-all duration-150 cursor-pointer flex flex-row"
                 ><svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="23"
@@ -77,7 +80,8 @@ import { Image } from "astro:assets";
                 >Proyectos</a
             >
             <a
-                class="hover:font-light hover:text-clstudio-pink transition-all duration-150 cursor-pointer flex flex-row"
+                href="#Sobre"
+                class="scroll-link hover:font-light hover:text-clstudio-pink transition-all duration-150 cursor-pointer flex flex-row"
                 ><svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="23"
@@ -96,7 +100,8 @@ import { Image } from "astro:assets";
                 >Sobre mi</a
             >
             <a
-                class="hover:font-light hover:text-clstudio-pink transition-all duration-150 cursor-pointer flex flex-row"
+                href="#Contacto"
+                class="scroll-link hover:font-light hover:text-clstudio-pink transition-all duration-150 cursor-pointer flex flex-row"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -134,8 +139,11 @@ import { Image } from "astro:assets";
 
     <style>
         .glassmorphism {
-            background-color: rgba(255, 255, 255, 0.5);
+            background-color: rgba(0, 0, 0, 0.5);
             box-shadow: 0 25px 40px rgba(255, 255, 255, 0.1);
+            width: 90%;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
         }
     </style>
     <script>

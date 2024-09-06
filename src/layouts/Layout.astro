@@ -2,6 +2,7 @@
 import "@fontsource-variable/onest";
 
 import Header from "../components/Header.astro";
+import FloatingButtonScroll from "../components/floatingButtonScroll.astro";
 
 interface Props {
 	title: string;
@@ -23,11 +24,36 @@ const { title } = Astro.props;
 	<body>
 		<Header />
 		<slot />
+		<FloatingButtonScroll />
 	</body>
 </html>
 <style is:global>
 	html {
 		font-family: "Onest Variable", system-ui, sans-serif;
 		background: #13151a;
+	}
+	body {
+		overflow: auto;
+	}
+	/* Scrollbar Styling */
+	::-webkit-scrollbar {
+		padding-top: 60px;
+		padding-bottom: 25px;
+		width: 10px;
+		z-index: 0;
+	}
+
+	::-webkit-scrollbar-track {
+		background-color: transparent;
+		-webkit-border-radius: 10px;
+		border-radius: 10px;
+		z-index: 0;
+	}
+
+	::-webkit-scrollbar-thumb {
+		-webkit-border-radius: 10px;
+		border-radius: 10px;
+		background: #6d6d6d;
+		z-index: 0;
 	}
 </style>
