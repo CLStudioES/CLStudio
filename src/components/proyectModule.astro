@@ -128,7 +128,7 @@ import Badge from "./Badge.astro";
             Conseguimos el <span class="font-semibold text-clstudio-pink"
                 >primer puesto</span
             > en el concurso, pero sobretodo nos sirvió para aprender y experimentar
-            con estos entornos y la <span
+            con estos entornos, la <span
                 class="font-semibold text-clstudio-pink">POO</span
             > y la <span class="font-semibold text-clstudio-pink"
                 >Programación concurrente y en tiempo real</span
@@ -155,7 +155,7 @@ import Badge from "./Badge.astro";
         </div>
         <img
             id="secondProyect"
-            class="animate-none w-[30%] h-auto mx-auto my-auto rounded-lg absolute -rotate-1 glowRectangleLitePink transition-transform duration-200"
+            class="w-[30%] h-auto mx-auto my-auto rounded-lg absolute -rotate-1 glowRectangleLitePink transition-transform duration-200"
             src="/img/Proyects/Ardva.png"
         />
     </div>
@@ -178,13 +178,15 @@ import Badge from "./Badge.astro";
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 entry.target.classList.add(
-                    "scale-110",
+                    "scale-125",
+                    "-rotate-6",
                     "transition-all",
                     "duration-200",
                 );
             } else {
                 entry.target.classList.remove(
-                    "scale-110",
+                    "scale-125",
+                    "-rotate-6",
                     "transition-all",
                     "duration-200",
                 );
