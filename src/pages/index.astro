@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../sections/Hero.astro";
 import Skills from "../sections/Skills.astro";
 import Works from "../sections/Works.astro";
-import Test from "../sections/Test.astro";
+import Proyectos from "../sections/Proyectos.astro";
 ---
 
 <Layout title="CLStudio | Desarrollo de Software">
@@ -15,6 +15,9 @@ import Test from "../sections/Test.astro";
 		<slot />
 		<hr class="text-white text-opacity-25 w-11/12 mx-auto my-2" />
 		<Skills />
+		<slot />
+		<hr class="text-white text-opacity-25 w-11/12 mx-auto my-2" />
+		<Proyectos />
 		<slot />
 	</main>
 </Layout>

@@ -7,11 +7,12 @@ import { Image } from "astro:assets";
     const sections = document.querySelectorAll("section");
     const experienciaLabel = document.getElementById("experienciaLabel");
     const skillsLabel = document.getElementById("skillsLabel");
+    const proyectosLabel = document.getElementById("proyectosLabel");
 
     const observer = new IntersectionObserver(handleIntersection, {
         root: null,
         rootMargin: "0px", // No margin
-        threshold: 0.1, // Varemo
+        threshold: 0.25, // Varemo
     });
 
     sections.forEach((section) => {
@@ -28,16 +29,28 @@ import { Image } from "astro:assets";
             }
         });
         if (visibleSectionIds[0] === "hero") {
+            // console.log("Hero");
             experienciaLabel.classList.remove(...active);
             skillsLabel.classList.remove(...active);
+            proyectosLabel.classList.remove(...active);
         } else if (visibleSectionIds[0] === "experiencia") {
+            // console.log("Exp");
             experienciaLabel.classList.add(...active);
             skillsLabel.classList.remove(...active);
+            proyectosLabel.classList.remove(...active);
         } else if (visibleSectionIds[0] === "skills") {
+            // console.log("Skills");
             experienciaLabel.classList.remove(...active);
             skillsLabel.classList.add(...active);
+            proyectosLabel.classList.remove(...active);
+        } else if (visibleSectionIds[0] === "proyectos") {
+            // console.log("Proyectos");
+            experienciaLabel.classList.remove(...active);
+            skillsLabel.classList.remove(...active);
+            proyectosLabel.classList.add(...active);
         }
     }
+
     //Fin checkeo navbar
 </script>
 <script type='text/javascript"'>
@@ -56,7 +69,7 @@ import { Image } from "astro:assets";
             });
         });
     });
-    //FinComportamiento del scroll al clicar en opciones del navbar
+    //Fin Comportamiento del scroll al clicar en opciones del navbar
 </script>
 <header
     id="header"
@@ -117,6 +130,7 @@ import { Image } from "astro:assets";
             >
             <a
                 href="#proyectos"
+                id="proyectosLabel"
                 class="scroll-link hover:font-light hover:text-clstudio-pink transition-all duration-150 cursor-pointer flex flex-row"
                 ><svg
                     xmlns="http://www.w3.org/2000/svg"
