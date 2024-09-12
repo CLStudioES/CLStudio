@@ -4,7 +4,7 @@ import Badge from "./Badge.astro";
 ---
 
 <article
-    class="w-full h-auto bg-white/15 border mb-24 mt-0 border-white border-opacity-50 rounded-lg flex flex-col md:flex-row"
+    class="w-full h-auto bg-white/15 border mb-44 mt-0 border-white border-opacity-50 rounded-lg flex flex-col md:flex-row"
 >
     <div
         class="flex flex-col px-8 md:py-12 w-full md:w-1/2 justify-between order-2"
@@ -67,7 +67,7 @@ import Badge from "./Badge.astro";
 </article>
 
 <article
-    class="w-full h-auto bg-white/15 border my-24 mt-0 border-white border-opacity-50 rounded-lg flex flex-col md:flex-row"
+    class="w-full h-auto bg-white/15 border my-44 mt-0 border-white border-opacity-50 rounded-lg flex flex-col md:flex-row"
 >
     <div
         class="flex flex-col px-8 md:py-12 w-full md:w-1/2 justify-between order-2"
@@ -157,6 +157,98 @@ import Badge from "./Badge.astro";
             id="secondProyect"
             class="w-[30%] h-auto mx-auto my-auto rounded-lg absolute -rotate-1 glowRectangleLitePink transition-transform duration-200"
             src="/img/Proyects/Ardva.png"
+        />
+    </div>
+</article>
+<article
+    class="w-full h-auto bg-white/15 border my-36 mt-0 border-white border-opacity-50 rounded-lg flex flex-col md:flex-row"
+>
+    <div
+        class="flex flex-col px-8 md:py-12 w-full md:w-1/2 justify-between order-2"
+    >
+        <span class="flex flex-col md:flex-row">
+            <h2 class="text-clstudio-pink text-4xl font-semibold">Snail It</h2>
+            <span class="text-3xl px-2 text-subtitle-text hidden md:flex"
+                >|</span
+            >
+            <span class="pt-1 space-x-2">
+                <RrssButton
+                    imagesrc="/img/rrss/github.svg"
+                    ,
+                    url="https://github.com/CLStudioES/Ardva"
+                    ,
+                    label="Github"
+                />
+
+                <RrssButton
+                    imagesrc="/img/rrss/cv.svg"
+                    ,
+                    url="https://universidadeuropea.com/resources/media/documents/200_4_Anexo_2_Memoria_Proyecto.pdf"
+                    ,
+                    label="Documentación"
+                />
+                <RrssButton
+                    imagesrc="/img/icons/openLink.svg"
+                    ,
+                    url="https://universidadeuropea.com/conocenos/escuela-arquitectura-ingenieria-diseno-madrid/pbs/"
+                    ,
+                    label="UEM"
+                />
+            </span>
+        </span>
+        <h3 class="text-title-text text-xl font-light">
+            Ganador premio <span class="font-normal">PBS 2017</span>.
+        </h3>
+        <p class="text-body-text-lighty text-lg font-extralight pt-10">
+            Este sistema domótico basado en <span
+                class="font-semibold text-clstudio-pink">Arduino</span
+            > y <span class="font-semibold text-clstudio-pink">Java</span>, fue
+            hecho como proyecto para la UEM y posteriormente presentado al <span
+                class="font-semibold text-clstudio-pink">concurso PBS</span
+            > del curso 2016 - 2017.
+        </p>
+        <p class="text-body-text-lighty text-lg font-extralight pt-1">
+            El sistema permitía controlar relés, alarmas, zumbadores, servos,
+            diversos sensores...etc. Además de presentar datos de consumos
+            eléctricos desde una <span class="font-semibold text-clstudio-pink"
+                >interfaz en Java</span
+            > y guardar todos los datos en una <span
+                class="font-semibold text-clstudio-pink">BBDD</span
+            >.
+        </p>
+        <p class="text-body-text-lighty text-lg font-extralight pt-1">
+            Conseguimos el <span class="font-semibold text-clstudio-pink"
+                >primer puesto</span
+            > en el concurso, pero sobretodo nos sirvió para aprender y experimentar
+            con estos entornos, la <span
+                class="font-semibold text-clstudio-pink">POO</span
+            > y la <span class="font-semibold text-clstudio-pink"
+                >Programación concurrente y en tiempo real</span
+            >.
+        </p>
+        <span
+            class="flex flex-col p-4 space-y-2 md:space-y-0 md:flex-row pt-12"
+        >
+            <Badge title="Java" iconURL="/img/Badges/code.svg" />
+            <Badge title="Arduino" iconURL="/img/Badges/code.svg" />
+            <Badge title="MySQL" iconURL="/img/Badges/mysql.svg" />
+            <Badge
+                title="Trabajo en equipo"
+                iconURL="/img/Badges/collaboration.svg"
+            />
+        </span>
+    </div>
+    <div
+        class="flex flex-col w-full md:w-1/2 items-center justify-center order-1"
+    >
+        <div
+            class="bg-white/25 w-9/12 aspect-video my-4 mx-auto rounded animate-iteration-count-infinite relative rotate-1"
+        >
+        </div>
+        <img
+            id="thirdProyect"
+            class="w-[25%] h-auto mx-auto my-auto rounded-lg absolute -rotate-1 glowRectangleLitePink transition-transform duration-200"
+            src="/img/Proyects/SNAIL.gif"
         />
     </div>
 </article>
