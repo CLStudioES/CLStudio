@@ -4,7 +4,142 @@
         Conoce un poco más sobre mí
     </p>
     <div
-        class="flex flex-col justify-center items-center mx-auto w-full h-auto bg-white mt-12"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 h-full mt-12 max-w-screen-2xl mx-auto"
     >
+        <div class="sm:col-span-1 md:col-span-3 h-auto md:h-full flex flex-col">
+            <article
+                class="group relative flex flex-col h-auto overflow-hidden rounded-lg px-4 py-6 flex-grow border border-white/25 glowRectangleLight"
+            >
+                <header>
+                    <h1 class="text-title-text font-extrabold text-3xl">
+                        🎓 Mi formación
+                    </h1>
+                </header>
+                <body>
+                    <div class="mt-6 px-3">
+                        <h2 class="text-title-text font-bold text-2xl">
+                            Grado en Ingeniería Informática
+                        </h2>
+                        <h3 class="text-subtitle-text font-light text-lg pt-2">
+                            UEM | UNIR
+                        </h3>
+                        <p class="pt-4 text-body-text">
+                            Después de cursar el <span
+                                class="font-extrabold text-clstudio-pink"
+                                >Bachillerato de ciencias puras</span
+                            >
+                            y haber tenido ya mi primer contacto con la programación,
+                            me embarqué en la aventura de empezar la <span
+                                class="font-extrabold text-clstudio-pink"
+                                >carrera de ingeniería informática</span
+                            >. Cuando llevaba la mitad y, por problemas
+                            personales y trabajo, dejé los estudios en la <span
+                                class="font-extrabold text-clstudio-pink"
+                                >UEM</span
+                            >. Tiempo después, volví a retomarlos en la <span
+                                class="font-extrabold text-clstudio-pink"
+                                >UNIR</span
+                            > de forma no presencial mientras continuaba mi <span
+                                class="font-extrabold text-clstudio-pink"
+                                >carrera como Freelance</span
+                            >.
+                        </p>
+                    </div>
+                    <div class="mt-6 px-3">
+                        <h2 class="text-title-text font-bold text-2xl">
+                            Formación 42 Madrid
+                        </h2>
+                        <h3 class="text-subtitle-text font-light text-lg pt-2">
+                            42 | Fundación Telefónica
+                        </h3>
+                        <p class="pt-4 text-body-text">
+                            En 2019 y, después de pasar las pruebas de ingreso y
+                            la famosa "piscina", me adentré en el mundo creado
+                            por 42, donde tuve la ocasión de aprender <span
+                                class="font-extrabold text-clstudio-pink"
+                                >nuevos lenguajes de programación</span
+                            >, <span class="font-extrabold text-clstudio-pink"
+                                >nuevas metodologías</span
+                            >, <span class="font-extrabold text-clstudio-pink"
+                                >patrones de diseño</span
+                            >, <span class="font-extrabold text-clstudio-pink"
+                                >estructuras de datos</span
+                            >, <span class="font-extrabold text-clstudio-pink"
+                                >buenas prácticas</span
+                            >...etc. que no había dominado en la universidad.
+                        </p>
+                    </div>
+                    <div class="mt-6 px-3">
+                        <h2 class="text-title-text font-bold text-2xl">
+                            Cursos y certificaciones
+                        </h2>
+                        <h3 class="text-subtitle-text font-light text-lg pt-2">
+                            Microsoft | Linkedin | Otros
+                        </h3>
+                        <p class="pt-4 text-body-text">
+                            Además de formarme de manera <span
+                                class="font-extrabold text-clstudio-pink"
+                                >autodidacta</span
+                            >, he realizado numerosos
+                            <span class="font-extrabold text-clstudio-pink"
+                                >cursos y formaciones</span
+                            > para mantenerme al día y <span
+                                class="font-extrabold text-clstudio-pink"
+                                >seguir aprendiendo nuevas tecnologías</span
+                            >. Gracias a ésto, he tenido la oportunidad de poner
+                            mis conocimientos en práctica y <span
+                                class="font-extrabold text-clstudio-pink"
+                                >realizar proyectos por mi cuenta o para
+                                terceros</span
+                            >.
+                        </p>
+                    </div>
+                </body>
+            </article>
+        </div>
+        <div class="sm:col-span-1 md:col-span-2 h-auto md:h-full flex flex-col">
+            <article
+                class="group relative flex flex-col overflow-hidden rounded-lg px-4 py-6 flex-grow border border-white/25 glowRectangleLight"
+            >
+                <header>
+                    <h1 class="text-title-text font-extrabold text-3xl">
+                        🙋 ¿Quién soy?
+                    </h1>
+                </header>
+                <body>
+                    <div class="mt-6 px-3"></div>
+                </body>
+            </article>
+        </div>
     </div>
 </section>
+<style>
+    .glowRectangle {
+        box-shadow:
+            0 0 20px rgba(255, 255, 255, 0.4),
+            0 0 40px rgba(255, 255, 255, 0.3),
+            0 0 60px rgba(255, 255, 255, 0.2),
+            0 0 80px rgba(255, 255, 255, 0.1);
+    }
+    .glowRectangleLite {
+        box-shadow:
+            0 0 20px rgba(255, 255, 255, 0.2),
+            0 0 40px rgba(255, 255, 255, 0.1),
+            0 0 60px rgba(255, 255, 255, 0.05),
+            0 0 80px rgba(255, 255, 255, 0.025);
+    }
+    .glowRectangleLight {
+        box-shadow:
+            0 0 20px rgba(255, 255, 255, 0.1),
+            0 0 40px rgba(255, 255, 255, 0.05),
+            0 0 60px rgba(255, 255, 255, 0.025),
+            0 0 80px rgba(255, 255, 255, 0.001);
+    }
+    .glowRectangleLitePink {
+        box-shadow:
+            0 0 20px rgba(204, 20, 127, 0.2),
+            0 0 40px rgba(204, 20, 127, 0.1),
+            0 0 60px rgba(204, 20, 127, 0.05),
+            0 0 80px rgba(204, 20, 127, 0.025);
+    }
+</style>
