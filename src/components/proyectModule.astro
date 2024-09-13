@@ -4,7 +4,7 @@ import Badge from "./Badge.astro";
 ---
 
 <article
-    class="w-full h-auto bg-white/15 border mb-44 mt-0 border-white border-opacity-50 rounded-lg flex flex-col md:flex-row"
+    class="w-full h-auto bg-white/15 border mb-20 mt-0 border-white border-opacity-50 rounded-lg flex flex-col md:flex-row"
 >
     <div
         class="flex flex-col px-8 md:py-12 w-full md:w-1/2 justify-between order-2"
@@ -40,6 +40,10 @@ import Badge from "./Badge.astro";
                 >Reparar un ordenador a golpes siguiendo el ritmo de la música</span
             >. ¿Quién no querría poder hacerlo?
         </p>
+        <p class="text-body-text-lighty text-lg font-extralight pt-1">
+            Puedes probarlo online o descargar el zip desde la web oficial de la
+            GGJ y ejecutarlo directamente en tu PC.
+        </p>
         <span
             class="flex flex-col p-4 space-y-2 md:space-y-0 md:flex-row pt-12"
         >
@@ -60,14 +64,14 @@ import Badge from "./Badge.astro";
         </div>
         <img
             id="firstProyect"
-            class="w-[30%] h-auto mx-auto my-auto rounded-lg absolute -rotate-1 glowRectangleLitePink transition-transform duration-200"
+            class="w-[25%] h-auto mx-auto my-auto rounded-lg border border-white/30 absolute -rotate-1 glowRectangleLitePink transition-transform duration-200"
             src="/img/Proyects/BEAT.gif"
         />
     </div>
 </article>
 
 <article
-    class="w-full h-auto bg-white/15 border my-44 mt-0 border-white border-opacity-50 rounded-lg flex flex-col md:flex-row"
+    class="w-full h-auto bg-white/15 border my-20 mt-0 border-white border-opacity-50 rounded-lg flex flex-col md:flex-row"
 >
     <div
         class="flex flex-col px-8 md:py-12 w-full md:w-1/2 justify-between order-2"
@@ -155,13 +159,14 @@ import Badge from "./Badge.astro";
         </div>
         <img
             id="secondProyect"
-            class="w-[30%] h-auto mx-auto my-auto rounded-lg absolute -rotate-1 glowRectangleLitePink transition-transform duration-200"
-            src="/img/Proyects/Ardva.png"
+            class="w-[25%] h-auto mx-auto my-auto rounded-lg border border-white/30 absolute -rotate-1 glowRectangleLitePink transition-transform duration-200"
+            src="/img/Proyects/Ardva2.gif"
         />
     </div>
 </article>
+
 <article
-    class="w-full h-auto bg-white/15 border my-36 mt-0 border-white border-opacity-50 rounded-lg flex flex-col md:flex-row"
+    class="w-full h-auto bg-white/15 border my-12 mt-0 border-white border-opacity-50 rounded-lg flex flex-col md:flex-row"
 >
     <div
         class="flex flex-col px-8 md:py-12 w-full md:w-1/2 justify-between order-2"
@@ -173,65 +178,44 @@ import Badge from "./Badge.astro";
             >
             <span class="pt-1 space-x-2">
                 <RrssButton
-                    imagesrc="/img/rrss/github.svg"
-                    ,
-                    url="https://github.com/CLStudioES/Ardva"
-                    ,
-                    label="Github"
-                />
-
-                <RrssButton
-                    imagesrc="/img/rrss/cv.svg"
-                    ,
-                    url="https://universidadeuropea.com/resources/media/documents/200_4_Anexo_2_Memoria_Proyecto.pdf"
-                    ,
-                    label="Documentación"
-                />
-                <RrssButton
                     imagesrc="/img/icons/openLink.svg"
                     ,
-                    url="https://universidadeuropea.com/conocenos/escuela-arquitectura-ingenieria-diseno-madrid/pbs/"
+                    url="#proyectos"
                     ,
-                    label="UEM"
+                    label="Demo (Próximamente)"
                 />
             </span>
         </span>
         <h3 class="text-title-text text-xl font-light">
-            Ganador premio <span class="font-normal">PBS 2017</span>.
+            Un juego vertical para movil inspirado en un juego de los 2000.
         </h3>
         <p class="text-body-text-lighty text-lg font-extralight pt-10">
-            Este sistema domótico basado en <span
-                class="font-semibold text-clstudio-pink">Arduino</span
-            > y <span class="font-semibold text-clstudio-pink">Java</span>, fue
-            hecho como proyecto para la UEM y posteriormente presentado al <span
-                class="font-semibold text-clstudio-pink">concurso PBS</span
-            > del curso 2016 - 2017.
+            Este juego está <span class="font-semibold text-clstudio-pink"
+                >basado en un proyecto de los 2000</span
+            > de minijuegos en el que una gota de tinta tenía que huir de un agua
+            creciente pegándose a las paredes, pero con un giro añadiendo obstáculos,
+            enemigos y mecánicas nuevas y divertidas.
         </p>
         <p class="text-body-text-lighty text-lg font-extralight pt-1">
-            El sistema permitía controlar relés, alarmas, zumbadores, servos,
-            diversos sensores...etc. Además de presentar datos de consumos
-            eléctricos desde una <span class="font-semibold text-clstudio-pink"
-                >interfaz en Java</span
-            > y guardar todos los datos en una <span
-                class="font-semibold text-clstudio-pink">BBDD</span
-            >.
+            El proyecto, aún <span class="font-semibold text-clstudio-pink"
+                >en desarrollo</span
+            >, está realizándose en <span
+                class="font-semibold text-clstudio-pink">Unity</span
+            > y <span class="font-semibold text-clstudio-pink">C#</span>, con la
+            colaboración de un artista para los sprites, logos y UI.
         </p>
         <p class="text-body-text-lighty text-lg font-extralight pt-1">
-            Conseguimos el <span class="font-semibold text-clstudio-pink"
-                >primer puesto</span
-            > en el concurso, pero sobretodo nos sirvió para aprender y experimentar
-            con estos entornos, la <span
-                class="font-semibold text-clstudio-pink">POO</span
-            > y la <span class="font-semibold text-clstudio-pink"
-                >Programación concurrente y en tiempo real</span
-            >.
+            ¡Dentro de poco podrás probar la <span
+                class="font-semibold text-clstudio-pink">demo</span
+            > y darme tu <span class="font-semibold text-clstudio-pink"
+                >feedback</span
+            > para saber lo que opinas!
         </p>
         <span
             class="flex flex-col p-4 space-y-2 md:space-y-0 md:flex-row pt-12"
         >
-            <Badge title="Java" iconURL="/img/Badges/code.svg" />
-            <Badge title="Arduino" iconURL="/img/Badges/code.svg" />
-            <Badge title="MySQL" iconURL="/img/Badges/mysql.svg" />
+            <Badge title="Unity" iconURL="/img/Badges/unity.svg" />
+            <Badge title="C#" iconURL="/img/Badges/csharp.svg" />
             <Badge
                 title="Trabajo en equipo"
                 iconURL="/img/Badges/collaboration.svg"
@@ -247,23 +231,21 @@ import Badge from "./Badge.astro";
         </div>
         <img
             id="thirdProyect"
-            class="w-[25%] h-auto mx-auto my-auto rounded-lg absolute -rotate-1 glowRectangleLitePink transition-transform duration-200"
-            src="/img/Proyects/SNAIL.gif"
+            class="w-[25%] h-auto mx-auto my-auto rounded-lg border border-white/30 absolute -rotate-1 glowRectangleLitePink transition-transform duration-200"
+            src="/img/Proyects/SNAIL2.gif"
         />
     </div>
 </article>
 
 <script>
-    // Select the div elements by their IDs
     const targetDivs = [
         document.getElementById("firstProyect"),
         document.getElementById("secondProyect"),
         document.getElementById("thirdProyect"),
-        // Add more IDs as needed
     ];
 
     const options = {
-        threshold: 0.75, // Trigger the callback when 75% of the target element is visible
+        threshold: 0.95, // Trigger de % de elemento para que realice la acción
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -286,7 +268,6 @@ import Badge from "./Badge.astro";
         });
     }, options);
 
-    // Start observing the target divs
     targetDivs.forEach((div) => {
         if (div) {
             observer.observe(div);
