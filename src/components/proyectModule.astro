@@ -237,11 +237,172 @@ import Badge from "./Badge.astro";
     </div>
 </article>
 
+<article
+    class="w-full h-auto bg-white/15 border my-12 mt-0 border-white border-opacity-50 rounded-lg flex flex-col md:flex-row"
+>
+    <div
+        class="flex flex-col px-8 md:py-12 w-full md:w-1/2 justify-between order-2"
+    >
+        <span class="flex flex-col md:flex-row">
+            <h2 class="text-clstudio-pink text-4xl font-semibold">
+                Proyectos web y app móviles
+            </h2>
+        </span>
+        <h3 class="text-title-text text-xl font-light">
+            Proyectos web y apps móviles personales y para empresas.
+        </h3>
+        <p class="text-body-text-lighty text-lg font-extralight pt-10">
+            Aquí podrás encontras diversos proyectos realizados para empresas,
+            para la comunidad o como retos personales.
+        </p>
+        <div class="flex flex-col pt-4 space-y-2">
+            <article
+                class="flex flex-col bg-white/15 border border-white border-opacity-25 rounded-lg glowRectangleLitePink p-4"
+            >
+                <header class="flex flex-col md:flex-row">
+                    <h2 class="text-clstudio-pink text-2xl font-semibold">
+                        Optimafar
+                    </h2>
+                    <span
+                        class="text-2xl px-2 text-subtitle-text hidden md:flex"
+                        >|</span
+                    >
+                    <span class="space-x-2">
+                        <RrssButton
+                            imagesrc="/img/icons/openLink.svg"
+                            ,
+                            url="https://optimafar.com/"
+                            ,
+                            label="Web"
+                        />
+                    </span>
+                    <p></p>
+                </header>
+                <p class="text-title-text font-lg font-light">
+                    Web corporativa desarrollada para la empresa Optimafar.
+                </p>
+                <span
+                    class="flex flex-col md:space-y-0 flex-wrap space-y-2 md:flex-row pt-2"
+                >
+                    <Badge title="Astro" iconURL="/img/Badges/astro.svg" />
+                    <Badge
+                        title="Javascript"
+                        iconURL="/img/Badges/javascript.svg"
+                    />
+                    <Badge title="HTML" iconURL="/img/Badges/html.svg" />
+                    <Badge title="CSS" iconURL="/img/Badges/css.svg" />
+                    <Badge
+                        title="TailwindCSS"
+                        iconURL="/img/Badges/tailwindcss.svg"
+                    />
+                </span>
+            </article>
+            <article
+                class="flex flex-col bg-white/15 border border-white border-opacity-25 rounded-lg glowRectangleLitePink p-4"
+            >
+                <header class="flex flex-col md:flex-row">
+                    <h2 class="text-clstudio-pink text-2xl font-semibold">
+                        Gipfarma
+                    </h2>
+                    <span
+                        class="text-2xl px-2 text-subtitle-text hidden md:flex"
+                        >|</span
+                    >
+                    <span class="space-x-2">
+                        <RrssButton
+                            imagesrc="/img/icons/openLink.svg"
+                            ,
+                            url="https://www.gipfarma.com/"
+                            ,
+                            label="Web"
+                        />
+                    </span>
+                    <p></p>
+                </header>
+                <p class="text-title-text font-lg font-light">
+                    Sistema CRM inteligente para farmacias y gestorías.
+                </p>
+                <span
+                    class="flex flex-col md:space-y-0 flex-wrap space-y-2 md:flex-row pt-2"
+                >
+                    <Badge title="Angular" iconURL="/img/Badges/angular.svg" />
+                    <Badge
+                        title="Javascript"
+                        iconURL="/img/Badges/javascript.svg"
+                    />
+                    <Badge title="HTML" iconURL="/img/Badges/html.svg" />
+                    <Badge title="CSS" iconURL="/img/Badges/css.svg" />
+                    <Badge
+                        title="TailwindCSS"
+                        iconURL="/img/Badges/tailwindcss.svg"
+                    />
+                </span>
+            </article>
+            <article
+                class="flex flex-col bg-white/15 border border-white border-opacity-25 rounded-lg glowRectangleLitePink p-4"
+            >
+                <header class="flex flex-col md:flex-row">
+                    <h2 class="text-clstudio-pink text-2xl font-semibold">
+                        The unofficial Pokédex
+                    </h2>
+                    <span
+                        class="text-2xl px-2 text-subtitle-text hidden md:flex"
+                        >|</span
+                    >
+                    <span class="space-x-2">
+                        <RrssButton
+                            imagesrc="/img/icons/openLink.svg"
+                            ,
+                            url="https://github.com/CLStudioES/unofficial-pokedex"
+                            ,
+                            label="Repo"
+                        />
+                    </span>
+                </header>
+                <p class="text-title-text font-lg font-light">
+                    Pokedex custom utilizando la API "PokeAPI". <span
+                        class="font-bold text-clstudio-pink">En desarrollo</span
+                    >.
+                </p>
+                <span
+                    class="flex flex-col md:space-y-0 flex-wrap space-y-2 md:flex-row pt-2"
+                >
+                    <Badge title="Astro" iconURL="/img/Badges/astro.svg" />
+                    <Badge
+                        title="Javascript"
+                        iconURL="/img/Badges/javascript.svg"
+                    />
+                    <Badge title="HTML" iconURL="/img/Badges/html.svg" />
+                    <Badge title="CSS" iconURL="/img/Badges/css.svg" />
+                    <Badge
+                        title="TailwindCSS"
+                        iconURL="/img/Badges/tailwindcss.svg"
+                    />
+                </span>
+            </article>
+        </div>
+    </div>
+    <div
+        class="flex flex-col w-full md:w-1/2 items-center justify-center order-1"
+    >
+        <div
+            class="bg-white/25 w-10/12 aspect-video my-4 mx-auto rounded animate-iteration-count-infinite relative rotate-1"
+        >
+        </div>
+        <img
+            id="fourthProyect"
+            class="w-[30%] h-auto mx-auto my-auto rounded-lg border border-white/30 absolute -rotate-1 glowRectangleLitePink transition-transform duration-200"
+            src="/img/Proyects/Optimafar.gif"
+        />
+    </div>
+</article>
+
 <script>
     const targetDivs = [
         document.getElementById("firstProyect"),
         document.getElementById("secondProyect"),
         document.getElementById("thirdProyect"),
+        document.getElementById("fourthProyect"),
     ];
 
     const options = {
