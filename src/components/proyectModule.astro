@@ -4,459 +4,361 @@ import Badge from "./Badge.astro";
 ---
 
 <article
-    class="w-full h-auto bg-white/15 border mb-20 mt-0 border-white border-opacity-50 rounded-lg flex flex-col lg:flex-row"
+  class="w-full h-auto bg-white/15 border mb-44 mt-0 border-white border-opacity-50 rounded-lg flex flex-col md:flex-row"
 >
-    <div
-        class="flex flex-col px-8 lg:py-12 w-full lg:w-1/2 justify-between order-2"
-    >
-        <span class="flex flex-col lg:flex-row">
-            <h2 class="text-clstudio-pink text-4xl font-semibold">
-                👊 Beat'n Repair
-            </h2>
-            <span class="text-3xl px-2 text-subtitle-text hidden lg:flex"
-                >|</span
-            >
-            <span class="pt-1 space-x-2">
-                <RrssButton
-                    imagesrc="/img/icons/openLink.svg"
-                    ,
-                    url="https://v3.globalgamejam.org/2020/games/beatn-repair-3"
-                    ,
-                    label="GGJ"
-                />
-            </span>
-        </span>
-        <h3 class="text-title-text text-xl font-light">
-            Videojuego presentado en la <span class="font-normal">GGJ 2020</span
-            >.
-        </h3>
-        <p class="text-body-text-lighty text-lg font-extralight pt-10">
-            Este proyecto fue mi primera participación en una <span
-                class="font-semibold text-clstudio-pink">Global Game Jam</span
-            >. La temática para ese evento fue la palabra "Reparar" y al querer
-            experimentar con mecánicas de ritmo, llegamos a la conclusión de
-            crear el tema principal del juego: <span
-                class="font-semibold text-clstudio-pink"
-                >Reparar un ordenador a golpes siguiendo el ritmo de la música</span
-            >. ¿Quién no querría poder hacerlo?
-        </p>
-        <p class="text-body-text-lighty text-lg font-extralight pt-1">
-            Puedes probarlo online o descargar el zip desde la web oficial de la
-            GGJ y ejecutarlo directamente en tu PC.
-        </p>
-        <span
-            class="flex flex-col p-4 space-y-2 lg:space-y-0 lg:flex-row pt-12"
-        >
-            <Badge title="Unity" iconURL="/img/Badges/unity.svg" />
-            <Badge title="C#" iconURL="/img/Badges/csharp.svg" />
-            <Badge
-                title="Trabajo en equipo"
-                iconURL="/img/Badges/collaboration.svg"
-            />
-        </span>
-    </div>
-    <div
-        class="flex flex-col w-full lg:w-1/2 items-center justify-center order-1"
-    >
-        <div
-            class="bg-white/25 w-9/12 aspect-video my-4 mx-auto rounded animate-iteration-count-infinite relative rotate-1"
-        >
-        </div>
-        <img
-            id="firstProyect"
-            class="w-[45%] lg:w-[25%] h-auto mx-auto my-auto rounded-lg border border-white/30 absolute -rotate-1 glowRectangleLitePink transition-transform duration-200"
-            src="/img/Proyects/BEAT.gif"
+  <div
+    class="flex flex-col px-8 md:py-12 w-full md:w-1/2 justify-between order-2"
+  >
+    <span class="flex flex-col md:flex-row">
+      <h2 class="text-clstudio-pink text-4xl font-semibold">Trick or death</h2>
+      <span class="text-3xl px-2 text-subtitle-text hidden md:flex">|</span>
+      <span class="pt-1 space-x-2">
+        <RrssButton
+          imagesrc="/img/icons/openLink.svg"
+          ,
+          url="https://github.com/CLStudioES/spookyHackaton_Cloudinary"
+          ,
+          label="Cloudinary Spooky Hackathon"
         />
+      </span>
+    </span>
+    <h3 class="text-title-text text-xl font-light">
+      Experiencia interactiva para la <span class="font-normal"
+        >Cloudinary & Midudev Spooky Hackathon 2024</span
+      >.
+    </h3>
+    <p class="text-body-text-lighty text-lg font-extralight pt-10">
+      Este proyecto fue mi participación junto a AlmTattoo en la <span
+        class="font-semibold text-clstudio-pink"
+        >Spooky Hackathon 2024 de Cloudinary</span
+      >. La temática para ese evento fue sobre <span
+        class="font-semibold text-clstudio-pink">Halloween</span
+      >, y teníamos que hacer uso de Cloudinary para subir y modificar imágenes
+      para darles un toque <span class="font-semibold text-clstudio-pink"
+        >spooky</span
+      >. Basé el proyecto en crear una historia interactiva con elecciones, que
+      modificaban las imagenes de los espacios y los personajes, dependiendo de
+      ellas. Aunque el proyecto no llegó a la final, me dio una oportunidad de
+      experimentar con la API de Cloudinary y realizar un proyecto divertido.
+      ¡Volveré el año que viene!
+    </p>
+    <span class="flex flex-col p-4 space-y-2 md:space-y-0 md:flex-row pt-12">
+      <Badge title="Astro" iconURL="/img/Badges/astro.svg" />
+      <Badge title="Javascript" iconURL="/img/Badges/javascript.svg" />
+      <Badge title="Fullstack" iconURL="/img/Badges/fullstack.svg" />
+      <Badge
+        title="Trabajo en equipo"
+        iconURL="/img/Badges/collaboration.svg"
+      />
+    </span>
+  </div>
+  <div
+    class="flex flex-col w-full md:w-1/2 items-center justify-center order-1"
+  >
+    <div
+      class="bg-white/25 w-9/12 aspect-video my-4 mx-auto rounded animate-iteration-count-infinite relative rotate-1"
+    >
     </div>
+    <img
+      id="firstProyect"
+      class="w-[30%] h-auto mx-auto my-auto rounded-lg absolute -rotate-1 glowRectangleLitePink transition-transform duration-200"
+      src="/img/Proyects/Spooky-Hackaton.gif"
+    />
+  </div>
 </article>
 
 <article
-    class="w-full h-auto bg-white/15 border my-20 mt-0 border-white border-opacity-50 rounded-lg flex flex-col lg:flex-row"
+  class="w-full h-auto bg-white/15 border mb-44 mt-0 border-white border-opacity-50 rounded-lg flex flex-col md:flex-row"
 >
-    <div
-        class="flex flex-col px-8 lg:py-12 w-full lg:w-1/2 justify-between order-2"
-    >
-        <span class="flex flex-col lg:flex-row">
-            <h2 class="text-clstudio-pink text-4xl font-semibold">
-                🏠 ArdVa Sistema Domótico
-            </h2>
-            <span class="text-3xl px-2 text-subtitle-text hidden lg:flex"
-                >|</span
-            >
-            <span class="pt-1 space-x-2">
-                <RrssButton
-                    imagesrc="/img/rrss/github.svg"
-                    ,
-                    url="https://github.com/CLStudioES/Ardva"
-                    ,
-                    label="Github"
-                />
-
-                <RrssButton
-                    imagesrc="/img/rrss/cv.svg"
-                    ,
-                    url="https://universidadeuropea.com/resources/media/documents/200_4_Anexo_2_Memoria_Proyecto.pdf"
-                    ,
-                    label="Documentación"
-                />
-                <RrssButton
-                    imagesrc="/img/icons/openLink.svg"
-                    ,
-                    url="https://universidadeuropea.com/conocenos/escuela-arquitectura-ingenieria-diseno-madrid/pbs/"
-                    ,
-                    label="UEM"
-                />
-            </span>
-        </span>
-        <h3 class="text-title-text text-xl font-light">
-            Ganador premio <span class="font-normal">PBS 2017</span>.
-        </h3>
-        <p class="text-body-text-lighty text-lg font-extralight pt-10">
-            Este sistema domótico basado en <span
-                class="font-semibold text-clstudio-pink">Arduino</span
-            > y <span class="font-semibold text-clstudio-pink">Java</span>, fue
-            hecho como proyecto para la UEM y posteriormente presentado al <span
-                class="font-semibold text-clstudio-pink">concurso PBS</span
-            > del curso 2016 - 2017.
-        </p>
-        <p class="text-body-text-lighty text-lg font-extralight pt-1">
-            El sistema permitía controlar relés, alarmas, zumbadores, servos,
-            diversos sensores...etc. Además de presentar datos de consumos
-            eléctricos desde una <span class="font-semibold text-clstudio-pink"
-                >interfaz en Java</span
-            > y guardar todos los datos en una <span
-                class="font-semibold text-clstudio-pink">BBDD</span
-            >.
-        </p>
-        <p class="text-body-text-lighty text-lg font-extralight pt-1">
-            Conseguimos el <span class="font-semibold text-clstudio-pink"
-                >primer puesto</span
-            > en el concurso, pero sobretodo nos sirvió para aprender y experimentar
-            con estos entornos, la <span
-                class="font-semibold text-clstudio-pink">POO</span
-            > y la <span class="font-semibold text-clstudio-pink"
-                >Programación concurrente y en tiempo real</span
-            >.
-        </p>
-        <span
-            class="flex flex-col p-4 space-y-2 lg:space-y-0 lg:flex-row pt-12"
-        >
-            <Badge title="Java" iconURL="/img/Badges/code.svg" />
-            <Badge title="Arduino" iconURL="/img/Badges/code.svg" />
-            <Badge title="MySQL" iconURL="/img/Badges/mysql.svg" />
-            <Badge
-                title="Trabajo en equipo"
-                iconURL="/img/Badges/collaboration.svg"
-            />
-        </span>
-    </div>
-    <div
-        class="flex flex-col w-full lg:w-1/2 items-center justify-center order-1"
-    >
-        <div
-            class="bg-white/25 w-9/12 aspect-video my-4 mx-auto rounded animate-iteration-count-infinite relative rotate-1"
-        >
-        </div>
-        <img
-            id="secondProyect"
-            class="w-[45%] lg:w-[25%] h-auto mx-auto my-auto rounded-lg border border-white/30 absolute -rotate-1 glowRectangleLitePink transition-transform duration-200"
-            src="/img/Proyects/Ardva2.gif"
+  <div
+    class="flex flex-col px-8 md:py-12 w-full md:w-1/2 justify-between order-2"
+  >
+    <span class="flex flex-col md:flex-row">
+      <h2 class="text-clstudio-pink text-4xl font-semibold">Beat'n Repair</h2>
+      <span class="text-3xl px-2 text-subtitle-text hidden md:flex">|</span>
+      <span class="pt-1 space-x-2">
+        <RrssButton
+          imagesrc="/img/icons/openLink.svg"
+          ,
+          url="https://v3.globalgamejam.org/2020/games/beatn-repair-3"
+          ,
+          label="GGJ"
         />
+      </span>
+    </span>
+    <h3 class="text-title-text text-xl font-light">
+      Videojuego presentado en la <span class="font-normal">GGJ 2020</span>.
+    </h3>
+    <p class="text-body-text-lighty text-lg font-extralight pt-10">
+      Este proyecto fue mi primera participación en una <span
+        class="font-semibold text-clstudio-pink">Global Game Jam</span
+      >. La temática para ese evento fue la palabra "Reparar" y al querer
+      experimentar con mecánicas de ritmo, llegamos a la conclusión de crear el
+      tema principal del juego: <span class="font-semibold text-clstudio-pink"
+        >Reparar un ordenador a golpes siguiendo el ritmo de la música</span
+      >. ¿Quién no querría poder hacerlo?
+    </p>
+    <span class="flex flex-col p-4 space-y-2 md:space-y-0 md:flex-row pt-12">
+      <Badge title="Unity" iconURL="/img/Badges/unity.svg" />
+      <Badge title="C#" iconURL="/img/Badges/csharp.svg" />
+      <Badge
+        title="Trabajo en equipo"
+        iconURL="/img/Badges/collaboration.svg"
+      />
+    </span>
+  </div>
+  <div
+    class="flex flex-col w-full md:w-1/2 items-center justify-center order-1"
+  >
+    <div
+      class="bg-white/25 w-9/12 aspect-video my-4 mx-auto rounded animate-iteration-count-infinite relative rotate-1"
+    >
     </div>
+    <img
+      id="secondProyect"
+      class="w-[30%] h-auto mx-auto my-auto rounded-lg absolute -rotate-1 glowRectangleLitePink transition-transform duration-200"
+      src="/img/Proyects/BEAT.gif"
+    />
+  </div>
 </article>
-
 <article
-    class="w-full h-auto bg-white/15 border my-12 mt-0 border-white border-opacity-50 rounded-lg flex flex-col lg:flex-row"
+  class="w-full h-auto bg-white/15 border my-44 mt-0 border-white border-opacity-50 rounded-lg flex flex-col md:flex-row"
 >
-    <div
-        class="flex flex-col px-8 lg:py-12 w-full lg:w-1/2 justify-between order-2"
-    >
-        <span class="flex flex-col lg:flex-row">
-            <h2 class="text-clstudio-pink text-4xl font-semibold">
-                🐌 Snail It
-            </h2>
-            <span class="text-3xl px-2 text-subtitle-text hidden lg:flex"
-                >|</span
-            >
-            <span class="pt-1 space-x-2">
-                <RrssButton
-                    imagesrc="/img/icons/openLink.svg"
-                    ,
-                    url="#"
-                    ,
-                    label="Demo (Próximamente)"
-                />
-            </span>
-        </span>
-        <h3 class="text-title-text text-xl font-light">
-            Un juego vertical para movil inspirado en un juego de los 2000.
-        </h3>
-        <p class="text-body-text-lighty text-lg font-extralight pt-10">
-            Este juego está <span class="font-semibold text-clstudio-pink"
-                >basado en un proyecto de los 2000</span
-            > de minijuegos en el que una gota de tinta tenía que huir de un agua
-            creciente pegándose a las paredes, pero con un giro añadiendo obstáculos,
-            enemigos y mecánicas nuevas y divertidas.
-        </p>
-        <p class="text-body-text-lighty text-lg font-extralight pt-1">
-            El proyecto, aún <span class="font-semibold text-clstudio-pink"
-                >en desarrollo</span
-            >, está realizándose en <span
-                class="font-semibold text-clstudio-pink">Unity</span
-            > y <span class="font-semibold text-clstudio-pink">C#</span>, con la
-            colaboración de un artista para los sprites, logos y UI.
-        </p>
-        <p class="text-body-text-lighty text-lg font-extralight pt-1">
-            ¡Dentro de poco podrás probar la <span
-                class="font-semibold text-clstudio-pink">demo</span
-            > y darme tu <span class="font-semibold text-clstudio-pink"
-                >feedback</span
-            > para saber lo que opinas!
-        </p>
-        <span
-            class="flex flex-col p-4 space-y-2 lg:space-y-0 lg:flex-row pt-12"
-        >
-            <Badge title="Unity" iconURL="/img/Badges/unity.svg" />
-            <Badge title="C#" iconURL="/img/Badges/csharp.svg" />
-            <Badge
-                title="Trabajo en equipo"
-                iconURL="/img/Badges/collaboration.svg"
-            />
-        </span>
-    </div>
-    <div
-        class="flex flex-col w-full lg:w-1/2 items-center justify-center order-1"
-    >
-        <div
-            class="bg-white/25 w-9/12 aspect-video my-4 mx-auto rounded animate-iteration-count-infinite relative rotate-1"
-        >
-        </div>
-        <img
-            id="thirdProyect"
-            class="w-[45%] lg:w-[25%] h-auto mx-auto my-auto rounded-lg border border-white/30 absolute -rotate-1 glowRectangleLitePink transition-transform duration-200"
-            src="/img/Proyects/SNAIL2.gif"
+  <div
+    class="flex flex-col px-8 md:py-12 w-full md:w-1/2 justify-between order-2"
+  >
+    <span class="flex flex-col md:flex-row">
+      <h2 class="text-clstudio-pink text-4xl font-semibold">
+        ArdVa Sistema Domótico
+      </h2>
+      <span class="text-3xl px-2 text-subtitle-text hidden md:flex">|</span>
+      <span class="pt-1 space-x-2">
+        <RrssButton
+          imagesrc="/img/rrss/github.svg"
+          ,
+          url="https://github.com/CLStudioES/Ardva"
+          ,
+          label="Github"
         />
+
+        <RrssButton
+          imagesrc="/img/rrss/cv.svg"
+          ,
+          url="https://universidadeuropea.com/resources/media/documents/200_4_Anexo_2_Memoria_Proyecto.pdf"
+          ,
+          label="Documentación"
+        />
+        <RrssButton
+          imagesrc="/img/icons/openLink.svg"
+          ,
+          url="https://universidadeuropea.com/conocenos/escuela-arquitectura-ingenieria-diseno-madrid/pbs/"
+          ,
+          label="UEM"
+        />
+      </span>
+    </span>
+    <h3 class="text-title-text text-xl font-light">
+      Ganador premio <span class="font-normal">PBS 2017</span>.
+    </h3>
+    <p class="text-body-text-lighty text-lg font-extralight pt-10">
+      Este sistema domótico basado en <span
+        class="font-semibold text-clstudio-pink">Arduino</span
+      > y <span class="font-semibold text-clstudio-pink">Java</span>, fue hecho
+      como proyecto para la UEM y posteriormente presentado al <span
+        class="font-semibold text-clstudio-pink">concurso PBS</span
+      > del curso 2016 - 2017.
+    </p>
+    <p class="text-body-text-lighty text-lg font-extralight pt-1">
+      El sistema permitía controlar relés, alarmas, zumbadores, servos, diversos
+      sensores...etc. Además de presentar datos de consumos eléctricos desde una <span
+        class="font-semibold text-clstudio-pink">interfaz en Java</span
+      > y guardar todos los datos en una <span
+        class="font-semibold text-clstudio-pink">BBDD</span
+      >.
+    </p>
+    <p class="text-body-text-lighty text-lg font-extralight pt-1">
+      Conseguimos el <span class="font-semibold text-clstudio-pink"
+        >primer puesto</span
+      > en el concurso, pero sobretodo nos sirvió para aprender y experimentar con
+      estos entornos, la <span class="font-semibold text-clstudio-pink"
+        >POO</span
+      > y la <span class="font-semibold text-clstudio-pink"
+        >Programación concurrente y en tiempo real</span
+      >.
+    </p>
+    <span class="flex flex-col p-4 space-y-2 md:space-y-0 md:flex-row pt-12">
+      <Badge title="Java" iconURL="/img/Badges/code.svg" />
+      <Badge title="Arduino" iconURL="/img/Badges/code.svg" />
+      <Badge title="MySQL" iconURL="/img/Badges/mysql.svg" />
+      <Badge
+        title="Trabajo en equipo"
+        iconURL="/img/Badges/collaboration.svg"
+      />
+    </span>
+  </div>
+  <div
+    class="flex flex-col w-full md:w-1/2 items-center justify-center order-1"
+  >
+    <div
+      class="bg-white/25 w-9/12 aspect-video my-4 mx-auto rounded animate-iteration-count-infinite relative rotate-1"
+    >
     </div>
+    <img
+      id="thirdProyect"
+      class="w-[30%] h-auto mx-auto my-auto rounded-lg absolute -rotate-1 glowRectangleLitePink transition-transform duration-200"
+      src="/img/Proyects/Ardva.png"
+    />
+  </div>
 </article>
-
 <article
-    class="w-full h-auto bg-white/15 border my-12 mt-0 border-white border-opacity-50 rounded-lg flex flex-col lg:flex-row"
+  class="w-full h-auto bg-white/15 border my-36 mt-0 border-white border-opacity-50 rounded-lg flex flex-col md:flex-row"
 >
-    <div
-        class="flex flex-col px-8 lg:py-12 w-full lg:w-1/2 justify-between order-2"
-    >
-        <span class="flex flex-col lg:flex-row">
-            <h2 class="text-clstudio-pink text-4xl font-semibold">
-                💻 Proyectos web y app móviles
-            </h2>
-        </span>
-        <h3 class="text-title-text text-xl font-light">
-            Proyectos web y apps móviles personales y para empresas.
-        </h3>
-        <p class="text-body-text-lighty text-lg font-extralight pt-10">
-            Aquí podrás encontras diversos proyectos realizados para empresas,
-            para la comunidad o como retos personales.
-        </p>
-        <div class="flex flex-col pt-4 space-y-2">
-            <article
-                class="flex flex-col bg-white/15 border border-white border-opacity-25 rounded-lg glowRectangleLitePink p-4"
-            >
-                <header class="flex flex-col lg:flex-row">
-                    <h2 class="text-clstudio-pink text-2xl font-extrabold">
-                        Optimafar
-                    </h2>
-                    <span
-                        class="text-2xl px-2 text-subtitle-text hidden lg:flex"
-                        >|</span
-                    >
-                    <span class="space-x-2">
-                        <RrssButton
-                            imagesrc="/img/icons/openLink.svg"
-                            ,
-                            url="https://optimafar.com/"
-                            ,
-                            label="Web"
-                        />
-                    </span>
-                    <p></p>
-                </header>
-                <p class="text-title-text font-lg font-light">
-                    Web corporativa desarrollada para la empresa Optimafar.
-                </p>
-                <span
-                    class="flex flex-col lg:space-y-0 flex-wrap space-y-2 lg:flex-row pt-4"
-                >
-                    <Badge title="Astro" iconURL="/img/Badges/astro.svg" />
-                    <Badge
-                        title="Javascript"
-                        iconURL="/img/Badges/javascript.svg"
-                    />
-                    <Badge title="HTML" iconURL="/img/Badges/html.svg" />
-                    <Badge title="CSS" iconURL="/img/Badges/css.svg" />
-                    <Badge
-                        title="TailwindCSS"
-                        iconURL="/img/Badges/tailwindcss.svg"
-                    />
-                </span>
-            </article>
-            <article
-                class="flex flex-col bg-white/15 border border-white border-opacity-25 rounded-lg glowRectangleLitePink p-4"
-            >
-                <header class="flex flex-col lg:flex-row">
-                    <h2 class="text-clstudio-pink text-2xl font-extrabold">
-                        Gipfarma
-                    </h2>
-                    <span
-                        class="text-2xl px-2 text-subtitle-text hidden lg:flex"
-                        >|</span
-                    >
-                    <span class="space-x-2">
-                        <RrssButton
-                            imagesrc="/img/icons/openLink.svg"
-                            ,
-                            url="https://www.gipfarma.com/"
-                            ,
-                            label="Web"
-                        />
-                    </span>
-                    <p></p>
-                </header>
-                <p class="text-title-text font-lg font-light">
-                    Sistema CRM inteligente para farmacias y gestorías.
-                </p>
-                <span
-                    class="flex flex-col lg:space-y-0 flex-wrap space-y-2 lg:flex-row pt-4"
-                >
-                    <Badge title="Angular" iconURL="/img/Badges/angular.svg" />
-                    <Badge
-                        title="Javascript"
-                        iconURL="/img/Badges/javascript.svg"
-                    />
-                    <Badge title="HTML" iconURL="/img/Badges/html.svg" />
-                    <Badge title="CSS" iconURL="/img/Badges/css.svg" />
-                    <Badge
-                        title="TailwindCSS"
-                        iconURL="/img/Badges/tailwindcss.svg"
-                    />
-                </span>
-            </article>
-            <article
-                class="flex flex-col bg-white/15 border border-white border-opacity-25 rounded-lg glowRectangleLitePink p-4"
-            >
-                <header class="flex flex-col lg:flex-row">
-                    <h2 class="text-clstudio-pink text-2xl font-extrabold">
-                        The unofficial Pokédex
-                    </h2>
-                    <span
-                        class="text-2xl px-2 text-subtitle-text hidden lg:flex"
-                        >|</span
-                    >
-                    <span class="space-x-2">
-                        <RrssButton
-                            imagesrc="/img/icons/openLink.svg"
-                            ,
-                            url="https://github.com/CLStudioES/unofficial-pokedex"
-                            ,
-                            label="Repo"
-                        />
-                    </span>
-                </header>
-                <p class="text-title-text font-lg font-light">
-                    Pokedex custom utilizando la API "PokeAPI". <span
-                        class="font-bold text-clstudio-pink">En desarrollo</span
-                    >.
-                </p>
-                <span
-                    class="flex flex-col lg:space-y-0 flex-wrap space-y-2 lg:flex-row pt-4"
-                >
-                    <Badge title="Astro" iconURL="/img/Badges/astro.svg" />
-                    <Badge
-                        title="Javascript"
-                        iconURL="/img/Badges/javascript.svg"
-                    />
-                    <Badge title="HTML" iconURL="/img/Badges/html.svg" />
-                    <Badge title="CSS" iconURL="/img/Badges/css.svg" />
-                    <Badge
-                        title="TailwindCSS"
-                        iconURL="/img/Badges/tailwindcss.svg"
-                    />
-                </span>
-            </article>
-        </div>
-    </div>
-    <div
-        class="flex flex-col w-full lg:w-1/2 items-center justify-center order-1"
-    >
-        <div
-            class="bg-white/25 w-10/12 aspect-video my-4 mx-auto rounded animate-iteration-count-infinite relative rotate-1"
-        >
-        </div>
-        <img
-            id="fourthProyect"
-            class="w-[50%] lg:w-[25%] h-auto mx-auto my-auto rounded-lg border border-white/30 absolute -rotate-1 glowRectangleLitePink transition-transform duration-200"
-            src="/img/Proyects/Optimafar.gif"
+  <div
+    class="flex flex-col px-8 md:py-12 w-full md:w-1/2 justify-between order-2"
+  >
+    <span class="flex flex-col md:flex-row">
+      <h2 class="text-clstudio-pink text-4xl font-semibold">Snail It</h2>
+      <span class="text-3xl px-2 text-subtitle-text hidden md:flex">|</span>
+      <span class="pt-1 space-x-2">
+        <RrssButton
+          imagesrc="/img/rrss/github.svg"
+          ,
+          url="https://github.com/CLStudioES/Ardva"
+          ,
+          label="Github"
         />
+
+        <RrssButton
+          imagesrc="/img/rrss/cv.svg"
+          ,
+          url="https://universidadeuropea.com/resources/media/documents/200_4_Anexo_2_Memoria_Proyecto.pdf"
+          ,
+          label="Documentación"
+        />
+        <RrssButton
+          imagesrc="/img/icons/openLink.svg"
+          ,
+          url="https://universidadeuropea.com/conocenos/escuela-arquitectura-ingenieria-diseno-madrid/pbs/"
+          ,
+          label="UEM"
+        />
+      </span>
+    </span>
+    <h3 class="text-title-text text-xl font-light">
+      Ganador premio <span class="font-normal">PBS 2017</span>.
+    </h3>
+    <p class="text-body-text-lighty text-lg font-extralight pt-10">
+      Este sistema domótico basado en <span
+        class="font-semibold text-clstudio-pink">Arduino</span
+      > y <span class="font-semibold text-clstudio-pink">Java</span>, fue hecho
+      como proyecto para la UEM y posteriormente presentado al <span
+        class="font-semibold text-clstudio-pink">concurso PBS</span
+      > del curso 2016 - 2017.
+    </p>
+    <p class="text-body-text-lighty text-lg font-extralight pt-1">
+      El sistema permitía controlar relés, alarmas, zumbadores, servos, diversos
+      sensores...etc. Además de presentar datos de consumos eléctricos desde una <span
+        class="font-semibold text-clstudio-pink">interfaz en Java</span
+      > y guardar todos los datos en una <span
+        class="font-semibold text-clstudio-pink">BBDD</span
+      >.
+    </p>
+    <p class="text-body-text-lighty text-lg font-extralight pt-1">
+      Conseguimos el <span class="font-semibold text-clstudio-pink"
+        >primer puesto</span
+      > en el concurso, pero sobretodo nos sirvió para aprender y experimentar con
+      estos entornos, la <span class="font-semibold text-clstudio-pink"
+        >POO</span
+      > y la <span class="font-semibold text-clstudio-pink"
+        >Programación concurrente y en tiempo real</span
+      >.
+    </p>
+    <span class="flex flex-col p-4 space-y-2 md:space-y-0 md:flex-row pt-12">
+      <Badge title="Java" iconURL="/img/Badges/code.svg" />
+      <Badge title="Arduino" iconURL="/img/Badges/code.svg" />
+      <Badge title="MySQL" iconURL="/img/Badges/mysql.svg" />
+      <Badge
+        title="Trabajo en equipo"
+        iconURL="/img/Badges/collaboration.svg"
+      />
+    </span>
+  </div>
+  <div
+    class="flex flex-col w-full md:w-1/2 items-center justify-center order-1"
+  >
+    <div
+      class="bg-white/25 w-9/12 aspect-video my-4 mx-auto rounded animate-iteration-count-infinite relative rotate-1"
+    >
     </div>
+    <img
+      id="fourthProyect"
+      class="w-[25%] h-auto mx-auto my-auto rounded-lg absolute -rotate-1 glowRectangleLitePink transition-transform duration-200"
+      src="/img/Proyects/SNAIL.gif"
+    />
+  </div>
 </article>
 
 <script>
-    const targetDivs = [
-        document.getElementById("firstProyect"),
-        document.getElementById("secondProyect"),
-        document.getElementById("thirdProyect"),
-        document.getElementById("fourthProyect"),
-    ];
+  // Select the div elements by their IDs
+  const targetDivs = [
+    document.getElementById("firstProyect"),
+    document.getElementById("secondProyect"),
+    document.getElementById("thirdProyect"),
+    document.getElementById("fourthProyect"),
+    // Add more IDs as needed
+  ];
 
-    const options = {
-        threshold: 0.95, // Trigger de % de elemento para que realice la acción
-    };
+  const options = {
+    threshold: 0.75, // Trigger the callback when 75% of the target element is visible
+  };
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add(
-                    "scale-125",
-                    "-rotate-6",
-                    "transition-all",
-                    "duration-200",
-                );
-            } else {
-                entry.target.classList.remove(
-                    "scale-125",
-                    "-rotate-6",
-                    "transition-all",
-                    "duration-200",
-                );
-            }
-        });
-    }, options);
-
-    targetDivs.forEach((div) => {
-        if (div) {
-            observer.observe(div);
-        }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add(
+          "scale-125",
+          "-rotate-6",
+          "transition-all",
+          "duration-200"
+        );
+      } else {
+        entry.target.classList.remove(
+          "scale-125",
+          "-rotate-6",
+          "transition-all",
+          "duration-200"
+        );
+      }
     });
+  }, options);
+
+  // Start observing the target divs
+  targetDivs.forEach((div) => {
+    if (div) {
+      observer.observe(div);
+    }
+  });
 </script>
 <style>
-    .glowRectangle {
-        box-shadow:
-            0 0 20px rgba(255, 255, 255, 0.4),
-            0 0 40px rgba(255, 255, 255, 0.3),
-            0 0 60px rgba(255, 255, 255, 0.2),
-            0 0 80px rgba(255, 255, 255, 0.1);
-    }
-    .glowRectangleLite {
-        box-shadow:
-            0 0 20px rgba(255, 255, 255, 0.2),
-            0 0 40px rgba(255, 255, 255, 0.1),
-            0 0 60px rgba(255, 255, 255, 0.05),
-            0 0 80px rgba(255, 255, 255, 0.025);
-    }
-    .glowRectangleLitePink {
-        box-shadow:
-            0 0 20px rgba(204, 20, 127, 0.2),
-            0 0 40px rgba(204, 20, 127, 0.1),
-            0 0 60px rgba(204, 20, 127, 0.05),
-            0 0 80px rgba(204, 20, 127, 0.025);
-    }
+  .glowRectangle {
+    box-shadow:
+      0 0 20px rgba(255, 255, 255, 0.4),
+      0 0 40px rgba(255, 255, 255, 0.3),
+      0 0 60px rgba(255, 255, 255, 0.2),
+      0 0 80px rgba(255, 255, 255, 0.1);
+  }
+  .glowRectangleLite {
+    box-shadow:
+      0 0 20px rgba(255, 255, 255, 0.2),
+      0 0 40px rgba(255, 255, 255, 0.1),
+      0 0 60px rgba(255, 255, 255, 0.05),
+      0 0 80px rgba(255, 255, 255, 0.025);
+  }
+  .glowRectangleLitePink {
+    box-shadow:
+      0 0 20px rgba(204, 20, 127, 0.2),
+      0 0 40px rgba(204, 20, 127, 0.1),
+      0 0 60px rgba(204, 20, 127, 0.05),
+      0 0 80px rgba(204, 20, 127, 0.025);
+  }
 </style>
