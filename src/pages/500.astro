@@ -1,0 +1,82 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- HTML Meta Tags -->
+    <meta name="description" content="Astro description" />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://clstudio.dev" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="CLStudio | Desarrollo de Software" />
+    <meta
+      property="og:description"
+      content="Porfolio de CLStudio - Desarrollador de Software"
+    />
+    <meta property="og:image" content="/img/logos/og_logo.png" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="clstudio.dev" />
+    <meta property="twitter:url" content="https://clstudio.dev" />
+    <meta name="twitter:title" content="CLStudio | Desarrollo de Software" />
+    <meta name="twitter:description" content="Astro description" />
+    <meta name="twitter:image" content="/img/logos/og_logo.png" />
+
+    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link href="/plugins/fontawesome-6.5.1/css/all.css" rel="stylesheet" />
+    <title>CLStudio - Página no encontrada</title>
+  </head>
+  <body class="overflow-hidden h-screen w-screen">
+    <div class="container h-full w-auto flex flex-col mx-auto my-auto">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center items-center my-auto"
+      >
+        <div class="my-auto mx-auto h-96 w-96 bg-white rounded-full">
+          <Image
+            class="object-contain pointer-events-none w-full h-full mx-auto my-auto"
+            src="/img/logos/og_logo.png"
+            alt="Logo Optimafar"
+            width={200}
+            height={200}
+            format="webp"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-4">
+          <div class="flex flex-col">
+            <h1 class="text-5xl text-white font-extralight uppercase">
+              Error 500
+            </h1>
+            <h3 class="text-xl text-white font-extralight pt-2">
+              Error interno del servidor
+            </h3>
+            <h3 class="text-white font-extralight pt-4">
+              ¡Ups! Lo sentimos, pero parece que hay un problema interno. Vuelve
+              a intentarlo en unos minutos.
+            </h3>
+            <a
+              href="/"
+              class="mx-auto mt-12 ml-0 inline-flex items-center font-semibold text-white bg-clstudio-pink rounded-lg py-2 px-6 z-50 hover:scale-105 transition-all duration-200"
+              >Inicio
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <style is:global>
+    html {
+      font-family: "Onest Variable", system-ui, sans-serif;
+      background: #16161e;
+      scrollbar-color: #777676 white;
+      scrollbar-width: thin;
+    }
+  </style>
+</html>

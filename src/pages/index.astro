@@ -5,23 +5,27 @@ import Skills from "../sections/Skills.astro";
 import Works from "../sections/Works.astro";
 import Proyectos from "../sections/Proyectos.astro";
 import Sobre from "../sections/Sobre.astro";
+import Contacto from "../sections/Contacto.astro";
 ---
 
 <Layout title="CLStudio | Desarrollo de Software">
-	<main>
-		<Hero />
-		<slot />
-		<hr class="text-white text-opacity-25 w-11/12 mx-auto mb-2" />
-		<Works />
-		<slot />
-		<hr class="text-white text-opacity-25 w-11/12 mx-auto my-2" />
-		<Skills />
-		<slot />
-		<hr class="text-white text-opacity-25 w-11/12 mx-auto my-2" />
-		<Proyectos />
-		<slot />
-		<hr class="text-white text-opacity-25 w-11/12 mx-auto my-2" />
-		<Sobre />
-		<slot />
-	</main>
+  <main>
+    <Hero />
+    <slot />
+    <hr class="text-white text-opacity-25 w-11/12 mx-auto mb-2" />
+    <Works />
+    <slot />
+    <hr class="text-white text-opacity-25 w-11/12 mx-auto my-2" />
+    <Skills />
+    <slot />
+    <hr class="text-white text-opacity-25 w-11/12 mx-auto my-2" />
+    <Proyectos />
+    <slot />
+    <hr class="text-white text-opacity-25 w-11/12 mx-auto my-2" />
+    <Sobre />
+    <slot />
+    <hr class="text-white text-opacity-25 w-11/12 mx-auto my-2" />
+    <Contacto />
+    <slot />
+  </main>
 </Layout>

@@ -1,0 +1,269 @@
+---
+import sendGrid from "@sendgrid/mail";
+import RrssButtonBig from "../components/rrssButtonBig.astro";
+
+sendGrid.setApiKey(import.meta.env.SENDGRID_API_KEY);
+const recaptchaKey = import.meta.env.RECAPTCHA_KEY_API.toString();
+const emailDestination = import.meta.env.EMAIL_DESTINATION.toString();
+
+let success = false;
+let responseCode = null;
+let hasURLFlag = false;
+let msgEmpty = false;
+
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+    const honeypot = data.get("website-clstudio");
+    const nombre = data.get("nombre");
+    const email = data.get("email");
+    const asunto = data.get("asunto");
+    const mensaje = data.get("mensaje");
+    const urlRegex =
+      /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/;
+    const hasUrl = urlRegex.test(mensaje.toString());
+    //Detect honeypot
+    if (honeypot) {
+      console.log("Potential spam detected");
+      success = false;
+      return;
+    }
+    if (hasUrl) {
+      hasURLFlag = true;
+    }
+    if (nombre == "" || email == "" || asunto == "" || mensaje == "") {
+      msgEmpty = true;
+    }
+    // Sending email
+    const msg = {
+      to: emailDestination,
+      from: "carlos@clstudio.es",
+      subject: "CLStudio - Solicitud de contacto",
+      text: `Nombre: ${nombre}\nEmail: ${email}\nAsunto: ${asunto}\nMensaje: ${mensaje}`,
+    };
+    if (hasURLFlag === false && msgEmpty === false) {
+      await sendGrid
+        .send(msg)
+        .then((response) => {
+          responseCode = response[0].statusCode;
+          success = true;
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    } else {
+      console.log(email);
+    }
+  } catch (error) {
+    console.error(error);
+  }
+}
+---
+
+<script src="https://www.google.com/recaptcha/enterprise.js" async defer
+></script>
+<section id="contacto" class="py-12 px-12 lg:px-24">
+  <h2 class="font-light text-4xl text-title-text">05 - Contacto</h2>
+  <p class="font-extralight text-xl text-subtitle-text py-2">
+    Mantengámonos en contacto
+  </p>
+  <div
+    class="grid grid-cols-1 lg:grid-cols-2 gap-1 lg:gap-0 h-full lg:mt-12 max-w-screen-2xl mx-auto justify-center items-center"
+  >
+    <div
+      class="col-span-1 lg:col-span-1 h-auto lg:h-full flex flex-col overflow-hidden rounded-lg lg:py-8"
+    >
+      <article
+        class="h-auto w-4/5 flex flex-col overflow-hidden rounded-lg py-16 justify-center flex-grow"
+      >
+        <h2 class="text-3xl font-semibold tracking-wide text-white">
+          Contáctame en <span class="text-clstudio-pink"
+            >cualquier momento.</span
+          >
+        </h2>
+        <p class="mt-8 text-lg text-subtitle-text">
+          Si tienes algún proyecto en mente o quieres colaborar conmigo, puedes
+          escribirme a:
+        </p>
+        <a
+          href="mailto:carlos@clstudio.es"
+          target="_blank"
+          class="group flex items-center mt-4 text-clstudio-pink space-x-2"
+        >
+          <img src="/img/rrss/mail.svg" class="h-6 w-6" />
+          <span class="group-hover:underline text-xl font-semibold"
+            >carlos@clstudio.es</span
+          >
+        </a>
+      </article>
+      <hr class="w-4/5 mx-auto text-subtitle-text ml-0 opacity-50" />
+      <article
+        class="h-auto w-4/5 flex flex-col overflow-hidden rounded-lg py-16 justify-center flex-grow"
+      >
+        <h2 class="text-3xl font-semibold tracking-wide text-white">
+          Sígueme en mis <span class="text-clstudio-pink">redes sociales</span>
+        </h2>
+        <p class="mt-8 text-lg text-subtitle-text">
+          Si quieres jugar una partida o simplemente charlar, puedes encontrarme
+          en:
+        </p>
+        <div class="flex flex-row mt-4 space-x-4">
+          <RrssButtonBig
+            imagesrc="/img/rrss/x.svg"
+            ,
+            url="https://x.com/CLDev94"
+            ,
+            label="X"
+          />
+          <RrssButtonBig
+            imagesrc="/img/rrss/discord.svg"
+            ,
+            url="https://discord.com/users/272391044564385793"
+            ,
+            label="Discord"
+          />
+        </div>
+      </article>
+    </div>
+    <div
+      class="hidden lg:block w-px bg-subtitle-text/50 h-[75%] absolute left-1/2 transform -translate-x-1/2"
+    >
+    </div>
+    <div
+      class="col-span-1 lg:col-span-1 h-auto lg:h-full flex flex-col text-center gap-y-8 overflow-hidden rounded-lg py-8"
+    >
+      <h2 class="text-xl font-semibold tracking-wide text-white px-36">
+        Rellena el <span class="text-clstudio-pink">formulario</span> y te contestaré
+        lo antes posible
+      </h2>
+      <article
+        class="group relative flex flex-col w-full lg:w-3/5 mx-auto h-auto overflow-hidden rounded-lg px-6 py-8 flex-grow border border-clstudio-pink/50 glowRectanglePink"
+      >
+        <form method="POST" class="space-y-4 lg:space-y-6 text-left">
+          <div class="flex flex-col sm:flex-row gap-4">
+            <div class="w-full sm:w-1/2">
+              <label for="Nombre" class="block mb-3 text-title-text font-light"
+                >Nombre</label
+              >
+              <input
+                type="text"
+                name="nombre"
+                id="nombre"
+                class="text-sm rounded-xl block w-full p-2.5 text-title-text bg-clstudio-black border border-white/25 focus:border-clstudio-pink focus:outline-none"
+                placeholder="Nombre"
+                required
+              />
+            </div>
+            <div class="w-full sm:w-1/2">
+              <label for="email" class="block mb-3 text-title-text font-light"
+                >Correo</label
+              >
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="text-sm rounded-xl block w-full p-2.5 text-title-text bg-clstudio-black border border-white/25 focus:border-clstudio-pink focus:outline-none"
+                placeholder="correo@dominio.com"
+                required
+              />
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <div class="w-full">
+              <label for="asunto" class="block mb-3 text-title-text font-light"
+                >Asunto</label
+              >
+              <input
+                type="text"
+                name="asunto"
+                id="asunto"
+                class="text-sm rounded-xl block w-full p-2.5 text-title-text bg-clstudio-black border border-white/25 focus:border-clstudio-pink focus:outline-none"
+                placeholder="¿De qué quieres charlar?"
+                required
+              />
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <div class="w-full">
+              <label for="mensaje" class="block mb-3 text-title-text font-light"
+                >Mensaje</label
+              >
+              <textarea
+                name="mensaje"
+                id="mensaje"
+                class="text-sm rounded-xl block w-full p-2.5 text-title-text bg-clstudio-black border border-white/25 focus:border-clstudio-pink focus:outline-none"
+                placeholder="Me gustaría comentarte..."
+                required></textarea>
+            </div>
+          </div>
+          <div class="flex justify-center items-center w-full">
+            <div
+              id="captcha"
+              class="g-recaptcha [&>div]:mx-auto"
+              data-sitekey={recaptchaKey}
+              data-callback="enableBtn"
+            >
+            </div>
+          </div>
+          <div style="display: none; visibility: hidden;">
+            <input
+              type="text"
+              name="website-clstudio"
+              id="website-clstudio"
+              autocomplete="off"
+              tabindex="-1"
+            />
+          </div>
+          <div class="flex flex-row gap-4">
+            <button
+              disabled="disabled"
+              id="contactButton"
+              class="cursor-not-allowed w-full bg-clstudio-pink text-white font-bold p-3 rounded-lg"
+            >
+              Enviar
+            </button>
+            <button
+              id="borrarForm"
+              class="w-full bg-clstudio-black text-white font-bold p-3 rounded-lg border border-white/25 hover:bg-white/10 transition-all duration-150"
+            >
+              Limpiar
+            </button>
+          </div>
+        </form>
+      </article>
+    </div>
+  </div>
+</section>
+<style>
+  .glowRectanglePink {
+    box-shadow:
+      0 0 20px rgba(204, 20, 127, 0.4),
+      0 0 40px rgba(204, 20, 127, 0.3),
+      0 0 60px rgba(204, 20, 127, 0.2),
+      0 0 80px rgba(204, 20, 127, 0.1);
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const cleanButton = document.getElementById("borrarForm");
+
+    cleanButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      const form = cleanButton.closest("form");
+      form.reset();
+    });
+  });
+</script>
+<script type="text/javascript">
+  function enableBtn() {
+    document.getElementById("contactButton").disabled = false;
+    document
+      .getElementById("contactButton")
+      .classList.remove("cursor-not-allowed");
+  }
+</script>
+<script define:vars={{ success, responseCode }}>
+  if (success === true) {
+    window.location.replace("/result?code=" + responseCode, (replace = true));
+  }
+</script>
