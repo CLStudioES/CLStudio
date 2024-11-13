@@ -2,14 +2,14 @@
 import sendGrid from "@sendgrid/mail";
 import RrssButtonBig from "../components/rrssButtonBig.astro";
 
-// sendGrid.setApiKey(import.meta.env.SENDGRID_API_KEY);
-// const recaptchaKey = import.meta.env.RECAPTCHA_KEY_API.toString();
-// const emailDestination = import.meta.env.EMAIL_DESTINATION.toString();
+sendGrid.setApiKey(import.meta.env.SENDGRID_API_KEY);
+const recaptchaKey = import.meta.env.RECAPTCHA_KEY_API.toString();
+const emailDestination = import.meta.env.EMAIL_DESTINATION.toString();
 
-// let success = false;
-// let responseCode = null;
-// let hasURLFlag = false;
-// let msgEmpty = false;
+let success = false;
+let responseCode = null;
+let hasURLFlag = false;
+let msgEmpty = false;
 
 // if (Astro.request.method === "POST") {
 //   try {
