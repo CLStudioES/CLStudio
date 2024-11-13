@@ -4,14 +4,14 @@ import Badge from "./Badge.astro";
 ---
 
 <article
-  class="w-full h-auto bg-white/15 border mb-44 mt-0 border-white border-opacity-50 rounded-lg flex flex-col md:flex-row"
+  class="w-full h-auto bg-white/15 border mb-44 mt-0 border-white border-opacity-50 rounded-lg flex flex-col lg:flex-row"
 >
   <div
-    class="flex flex-col px-8 md:py-12 w-full md:w-1/2 justify-between order-2"
+    class="flex flex-col px-8 lg:py-12 w-full lg:w-1/2 justify-between order-2"
   >
-    <span class="flex flex-col md:flex-row">
+    <span class="flex flex-col lg:flex-row">
       <h2 class="text-clstudio-pink text-4xl font-semibold">Trick or death</h2>
-      <span class="text-3xl px-2 text-subtitle-text hidden md:flex">|</span>
+      <span class="text-3xl px-2 text-subtitle-text hidden lg:flex">|</span>
       <span class="pt-1 space-x-2">
         <RrssButton
           imagesrc="/img/icons/openLink.svg"
@@ -42,7 +42,7 @@ import Badge from "./Badge.astro";
       experimentar con la API de Cloudinary y realizar un proyecto divertido.
       ¡Volveré el año que viene!
     </p>
-    <span class="flex flex-col p-4 space-y-2 md:space-y-0 md:flex-row pt-12">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 p-4 pt-12">
       <Badge title="Astro" iconURL="/img/Badges/astro.svg" />
       <Badge title="Javascript" iconURL="/img/Badges/javascript.svg" />
       <Badge title="Fullstack" iconURL="/img/Badges/fullstack.svg" />
@@ -50,10 +50,10 @@ import Badge from "./Badge.astro";
         title="Trabajo en equipo"
         iconURL="/img/Badges/collaboration.svg"
       />
-    </span>
+    </div>
   </div>
   <div
-    class="flex flex-col w-full md:w-1/2 items-center justify-center order-1"
+    class="flex flex-col w-full lg:w-1/2 items-center justify-center order-1"
   >
     <div
       class="bg-white/25 w-9/12 aspect-video my-4 mx-auto rounded animate-iteration-count-infinite relative rotate-1"
@@ -61,21 +61,20 @@ import Badge from "./Badge.astro";
     </div>
     <img
       id="firstProyect"
-      class="w-[30%] h-auto mx-auto my-auto rounded-lg absolute -rotate-1 glowRectangleLitePink transition-transform duration-200"
+      class="w-[50%] lg:w-[30%] h-auto mx-auto my-auto rounded-lg absolute -rotate-1 glowRectangleLitePink transition-transform duration-200"
       src="/img/Proyects/Spooky-Hackaton.gif"
     />
   </div>
 </article>
-
 <article
-  class="w-full h-auto bg-white/15 border mb-44 mt-0 border-white border-opacity-50 rounded-lg flex flex-col md:flex-row"
+  class="w-full h-auto bg-white/15 border mb-44 mt-0 border-white border-opacity-50 rounded-lg flex flex-col lg:flex-row"
 >
   <div
-    class="flex flex-col px-8 md:py-12 w-full md:w-1/2 justify-between order-2"
+    class="flex flex-col px-8 lg:py-12 w-full lg:w-1/2 justify-between order-2"
   >
-    <span class="flex flex-col md:flex-row">
+    <span class="flex flex-col lg:flex-row">
       <h2 class="text-clstudio-pink text-4xl font-semibold">Beat'n Repair</h2>
-      <span class="text-3xl px-2 text-subtitle-text hidden md:flex">|</span>
+      <span class="text-3xl px-2 text-subtitle-text hidden lg:flex">|</span>
       <span class="pt-1 space-x-2">
         <RrssButton
           imagesrc="/img/icons/openLink.svg"
@@ -98,17 +97,17 @@ import Badge from "./Badge.astro";
         >Reparar un ordenador a golpes siguiendo el ritmo de la música</span
       >. ¿Quién no querría poder hacerlo?
     </p>
-    <span class="flex flex-col p-4 space-y-2 md:space-y-0 md:flex-row pt-12">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 p-4 pt-12">
       <Badge title="Unity" iconURL="/img/Badges/unity.svg" />
       <Badge title="C#" iconURL="/img/Badges/csharp.svg" />
       <Badge
         title="Trabajo en equipo"
         iconURL="/img/Badges/collaboration.svg"
       />
-    </span>
+    </div>
   </div>
   <div
-    class="flex flex-col w-full md:w-1/2 items-center justify-center order-1"
+    class="flex flex-col w-full lg:w-1/2 items-center justify-center order-1"
   >
     <div
       class="bg-white/25 w-9/12 aspect-video my-4 mx-auto rounded animate-iteration-count-infinite relative rotate-1"
@@ -116,22 +115,22 @@ import Badge from "./Badge.astro";
     </div>
     <img
       id="secondProyect"
-      class="w-[30%] h-auto mx-auto my-auto rounded-lg absolute -rotate-1 glowRectangleLitePink transition-transform duration-200"
+      class="w-[50%] lg:w-[30%] h-auto mx-auto my-auto rounded-lg absolute -rotate-1 glowRectangleLitePink transition-transform duration-200"
       src="/img/Proyects/BEAT.gif"
     />
   </div>
 </article>
 <article
-  class="w-full h-auto bg-white/15 border my-44 mt-0 border-white border-opacity-50 rounded-lg flex flex-col md:flex-row"
+  class="w-full h-auto bg-white/15 border my-44 mt-0 border-white border-opacity-50 rounded-lg flex flex-col lg:flex-row"
 >
   <div
-    class="flex flex-col px-8 md:py-12 w-full md:w-1/2 justify-between order-2"
+    class="flex flex-col px-8 lg:py-12 w-full lg:w-1/2 justify-between order-2"
   >
-    <span class="flex flex-col md:flex-row">
+    <span class="flex flex-col lg:flex-row">
       <h2 class="text-clstudio-pink text-4xl font-semibold">
         ArdVa Sistema Domótico
       </h2>
-      <span class="text-3xl px-2 text-subtitle-text hidden md:flex">|</span>
+      <span class="text-3xl px-2 text-subtitle-text hidden lg:flex">|</span>
       <span class="pt-1 space-x-2">
         <RrssButton
           imagesrc="/img/rrss/github.svg"
@@ -186,7 +185,7 @@ import Badge from "./Badge.astro";
         >Programación concurrente y en tiempo real</span
       >.
     </p>
-    <span class="flex flex-col p-4 space-y-2 md:space-y-0 md:flex-row pt-12">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 p-4 pt-12">
       <Badge title="Java" iconURL="/img/Badges/code.svg" />
       <Badge title="Arduino" iconURL="/img/Badges/code.svg" />
       <Badge title="MySQL" iconURL="/img/Badges/mysql.svg" />
@@ -194,10 +193,10 @@ import Badge from "./Badge.astro";
         title="Trabajo en equipo"
         iconURL="/img/Badges/collaboration.svg"
       />
-    </span>
+    </div>
   </div>
   <div
-    class="flex flex-col w-full md:w-1/2 items-center justify-center order-1"
+    class="flex flex-col w-full lg:w-1/2 items-center justify-center order-1"
   >
     <div
       class="bg-white/25 w-9/12 aspect-video my-4 mx-auto rounded animate-iteration-count-infinite relative rotate-1"
@@ -205,20 +204,20 @@ import Badge from "./Badge.astro";
     </div>
     <img
       id="thirdProyect"
-      class="w-[30%] h-auto mx-auto my-auto rounded-lg absolute -rotate-1 glowRectangleLitePink transition-transform duration-200"
+      class="w-[50%] lg:w-[30%] h-auto mx-auto my-auto rounded-lg absolute -rotate-1 glowRectangleLitePink transition-transform duration-200"
       src="/img/Proyects/Ardva.png"
     />
   </div>
 </article>
 <article
-  class="w-full h-auto bg-white/15 border my-36 mt-0 border-white border-opacity-50 rounded-lg flex flex-col md:flex-row"
+  class="w-full h-auto bg-white/15 border my-36 mt-0 border-white border-opacity-50 rounded-lg flex flex-col lg:flex-row"
 >
   <div
-    class="flex flex-col px-8 md:py-12 w-full md:w-1/2 justify-between order-2"
+    class="flex flex-col px-8 lg:py-12 w-full lg:w-1/2 justify-between order-2"
   >
-    <span class="flex flex-col md:flex-row">
+    <span class="flex flex-col lg:flex-row">
       <h2 class="text-clstudio-pink text-4xl font-semibold">Snail It</h2>
-      <span class="text-3xl px-2 text-subtitle-text hidden md:flex">|</span>
+      <span class="text-3xl px-2 text-subtitle-text hidden lg:flex">|</span>
       <span class="pt-1 space-x-2">
         <RrssButton
           imagesrc="/img/rrss/github.svg"
@@ -273,7 +272,7 @@ import Badge from "./Badge.astro";
         >Programación concurrente y en tiempo real</span
       >.
     </p>
-    <span class="flex flex-col p-4 space-y-2 md:space-y-0 md:flex-row pt-12">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 p-4 pt-12">
       <Badge title="Java" iconURL="/img/Badges/code.svg" />
       <Badge title="Arduino" iconURL="/img/Badges/code.svg" />
       <Badge title="MySQL" iconURL="/img/Badges/mysql.svg" />
@@ -281,10 +280,10 @@ import Badge from "./Badge.astro";
         title="Trabajo en equipo"
         iconURL="/img/Badges/collaboration.svg"
       />
-    </span>
+    </div>
   </div>
   <div
-    class="flex flex-col w-full md:w-1/2 items-center justify-center order-1"
+    class="flex flex-col w-full lg:w-1/2 items-center justify-center order-1"
   >
     <div
       class="bg-white/25 w-9/12 aspect-video my-4 mx-auto rounded animate-iteration-count-infinite relative rotate-1"
@@ -292,7 +291,7 @@ import Badge from "./Badge.astro";
     </div>
     <img
       id="fourthProyect"
-      class="w-[25%] h-auto mx-auto my-auto rounded-lg absolute -rotate-1 glowRectangleLitePink transition-transform duration-200"
+      class="w-[40%] lg:w-[25%] h-auto mx-auto my-auto rounded-lg absolute -rotate-1 glowRectangleLitePink transition-transform duration-200"
       src="/img/Proyects/SNAIL.gif"
     />
   </div>
