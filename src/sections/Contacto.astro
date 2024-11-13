@@ -2,62 +2,62 @@
 import sendGrid from "@sendgrid/mail";
 import RrssButtonBig from "../components/rrssButtonBig.astro";
 
-sendGrid.setApiKey(import.meta.env.SENDGRID_API_KEY);
-const recaptchaKey = import.meta.env.RECAPTCHA_KEY_API.toString();
-const emailDestination = import.meta.env.EMAIL_DESTINATION.toString();
+// sendGrid.setApiKey(import.meta.env.SENDGRID_API_KEY);
+// const recaptchaKey = import.meta.env.RECAPTCHA_KEY_API.toString();
+// const emailDestination = import.meta.env.EMAIL_DESTINATION.toString();
 
-let success = false;
-let responseCode = null;
-let hasURLFlag = false;
-let msgEmpty = false;
+// let success = false;
+// let responseCode = null;
+// let hasURLFlag = false;
+// let msgEmpty = false;
 
-if (Astro.request.method === "POST") {
-  try {
-    const data = await Astro.request.formData();
-    const honeypot = data.get("website-clstudio");
-    const nombre = data.get("nombre");
-    const email = data.get("email");
-    const asunto = data.get("asunto");
-    const mensaje = data.get("mensaje");
-    const urlRegex =
-      /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/;
-    const hasUrl = urlRegex.test(mensaje.toString());
-    //Detect honeypot
-    if (honeypot) {
-      console.log("Potential spam detected");
-      success = false;
-      return;
-    }
-    if (hasUrl) {
-      hasURLFlag = true;
-    }
-    if (nombre == "" || email == "" || asunto == "" || mensaje == "") {
-      msgEmpty = true;
-    }
-    // Sending email
-    const msg = {
-      to: emailDestination,
-      from: "carlos@clstudio.es",
-      subject: "CLStudio - Solicitud de contacto",
-      text: `Nombre: ${nombre}\nEmail: ${email}\nAsunto: ${asunto}\nMensaje: ${mensaje}`,
-    };
-    if (hasURLFlag === false && msgEmpty === false) {
-      await sendGrid
-        .send(msg)
-        .then((response) => {
-          responseCode = response[0].statusCode;
-          success = true;
-        })
-        .catch((error) => {
-          console.error(error);
-        });
-    } else {
-      console.log(email);
-    }
-  } catch (error) {
-    console.error(error);
-  }
-}
+// if (Astro.request.method === "POST") {
+//   try {
+//     const data = await Astro.request.formData();
+//     const honeypot = data.get("website-clstudio");
+//     const nombre = data.get("nombre");
+//     const email = data.get("email");
+//     const asunto = data.get("asunto");
+//     const mensaje = data.get("mensaje");
+//     const urlRegex =
+//       /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/;
+//     const hasUrl = urlRegex.test(mensaje.toString());
+//     //Detect honeypot
+//     if (honeypot) {
+//       console.log("Potential spam detected");
+//       success = false;
+//       return;
+//     }
+//     if (hasUrl) {
+//       hasURLFlag = true;
+//     }
+//     if (nombre == "" || email == "" || asunto == "" || mensaje == "") {
+//       msgEmpty = true;
+//     }
+//     // Sending email
+//     const msg = {
+//       to: emailDestination,
+//       from: "carlos@clstudio.es",
+//       subject: "CLStudio - Solicitud de contacto",
+//       text: `Nombre: ${nombre}\nEmail: ${email}\nAsunto: ${asunto}\nMensaje: ${mensaje}`,
+//     };
+//     if (hasURLFlag === false && msgEmpty === false) {
+//       await sendGrid
+//         .send(msg)
+//         .then((response) => {
+//           responseCode = response[0].statusCode;
+//           success = true;
+//         })
+//         .catch((error) => {
+//           console.error(error);
+//         });
+//     } else {
+//       console.log(email);
+//     }
+//   } catch (error) {
+//     console.error(error);
+//   }
+// }
 ---
 
 <script src="https://www.google.com/recaptcha/enterprise.js" async defer
@@ -200,7 +200,6 @@ if (Astro.request.method === "POST") {
             <div
               id="captcha"
               class="g-recaptcha [&>div]:mx-auto"
-              data-sitekey={recaptchaKey}
               data-callback="enableBtn"
             >
             </div>
@@ -262,8 +261,8 @@ if (Astro.request.method === "POST") {
       .classList.remove("cursor-not-allowed");
   }
 </script>
-<script define:vars={{ success, responseCode }}>
+<!-- <script define:vars={{ success, responseCode }}>
   if (success === true) {
     window.location.replace("/result?code=" + responseCode, (replace = true));
   }
-</script>
+</script> -->
