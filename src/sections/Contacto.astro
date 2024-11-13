@@ -196,13 +196,12 @@ let msgEmpty = false;
                 required></textarea>
             </div>
           </div>
-          <div class="flex justify-center items-center w-full">
-            <div
-              id="captcha"
-              class="g-recaptcha [&>div]:mx-auto"
-              data-callback="enableBtn"
-            >
-            </div>
+          <div
+            id="captcha"
+            class="g-recaptcha flex justify-center items-center w-full"
+            data-callback="enableBtn"
+            data-sitekey={recaptchaKey}
+          >
           </div>
           <div style="display: none; visibility: hidden;">
             <input
