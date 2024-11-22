@@ -5,7 +5,7 @@ import RrssButtonBig from "../components/rrssButtonBig.astro";
 sendGrid.setApiKey(import.meta.env.SENDGRID_API_KEY);
 const recaptchaKey = import.meta.env.RECAPTCHA_KEY_API.toString();
 const emailDestination = import.meta.env.EMAIL_DESTINATION.toString();
-
+let foreignLanguage = true;
 let success = false;
 let responseCode = null;
 let hasURLFlag = false;
@@ -34,6 +34,100 @@ if (Astro.request.method === "POST") {
     if (nombre == "" || email == "" || asunto == "" || mensaje == "") {
       msgEmpty = true;
     }
+    //Detect language
+    function detectLanguageES_EN(text) {
+      // Common Spanish words
+      const spanishWords = new Set([
+        "el",
+        "la",
+        "los",
+        "las",
+        "un",
+        "una",
+        "unos",
+        "unas",
+        "y",
+        "o",
+        "pero",
+        "porque",
+        "que",
+        "cuando",
+        "como",
+        "este",
+        "esta",
+        "estos",
+        "estas",
+        "ese",
+        "esa",
+        "para",
+        "por",
+        "con",
+        "sin",
+        "sobre",
+        "entre",
+        "hola",
+        "gracias",
+        "buenos",
+        "días",
+        "tarde",
+        "noche",
+      ]);
+
+      // Common English words
+      const englishWords = new Set([
+        "the",
+        "a",
+        "an",
+        "and",
+        "or",
+        "but",
+        "because",
+        "that",
+        "when",
+        "how",
+        "what",
+        "where",
+        "who",
+        "this",
+        "these",
+        "those",
+        "it",
+        "they",
+        "we",
+        "for",
+        "to",
+        "in",
+        "on",
+        "at",
+        "from",
+        "with",
+        "hello",
+        "thank",
+        "good",
+        "morning",
+        "evening",
+        "night",
+      ]);
+
+      // Clean and split the text
+      const words = text
+        .toLowerCase()
+        .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "")
+        .split(/\s+/);
+
+      let spanishCount = 0;
+      let englishCount = 0;
+
+      // Count matches for each language
+      words.forEach((word) => {
+        if (spanishWords.has(word)) spanishCount++;
+        if (englishWords.has(word)) englishCount++;
+      });
+      if (spanishCount > 0 || englishCount > 0) {
+        foreignLanguage = false;
+      }
+    }
+    detectLanguageES_EN(mensaje);
     // Sending email
     const msg = {
       to: emailDestination,
@@ -41,7 +135,11 @@ if (Astro.request.method === "POST") {
       subject: "CLStudio - Solicitud de contacto",
       text: `Nombre: ${nombre}\nEmail: ${email}\nAsunto: ${asunto}\nMensaje: ${mensaje}`,
     };
-    if (hasURLFlag === false && msgEmpty === false) {
+    if (
+      hasURLFlag === false &&
+      msgEmpty === false &&
+      foreignLanguage !== true
+    ) {
       await sendGrid
         .send(msg)
         .then((response) => {
